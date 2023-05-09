@@ -82,17 +82,17 @@
   /* border-style: solid; */
   /* border-color: blue; */
   font-family: "futura-pt", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 2.23vw;
   letter-spacing: 0.39vw;
   font-size: 1.6vw;
 }
 
 .Acorn-logo {
-  padding: 1.5vw;
+  padding: 2vw;
   /* border-style: solid; */
   /* border-color: blue; */
-  height: 3vw;
+  height: 4vw;
   width: auto;
   fill: black;
 }
