@@ -1,0 +1,24 @@
+.Main-header {
+  /* background-color: #282c34; */
+  border-style: solid;
+  border-color: green;
+  user-select: none;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.TitleWithLine {
+  /* margin-top: 3vh;
+  margin-bottom: 3vh; */
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* border-style: solid;
+  border-color: blue; */
+}
