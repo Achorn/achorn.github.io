@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+  border-style: solid;
+  border-color: red;
+  /* padding-top: 50px; */
+  /* padding-left: 20vw; */
+  /* padding-right: 20vw; */
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  border-style: solid;
+  border-color: green;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  /* color: white; */
+}
+
+.TitleWithLine {
+  /* min-height: 100px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* border-style: solid; */
+  /* border-color: blue; */
+}
+.vl {
+  margin: 3vw;
+  border-left: 1px solid black;
+  height: 7vh;
+}
+#title {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  color: #000;
+  line-height: 2.23vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 35vw;
+  text-align: right;
+  letter-spacing: 0.39vw;
+  font-size: 1.6vw;
+}
+#description {
+  letter-spacing: 0.125vw;
+  font-family: "caslon";
+  font-size: 0.96vw;
+  color: #000;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  width: 35vw;
+  text-transform: none;
+}
+
+.Image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 50vw;
+  border-style: solid;
+  border-color: green;
+  overflow: hidden;
+}
+
+.App-logo {
+  object-fit: fill;
+  width: auto;
+  max-width: 100%;
+  /* height: auto; */
+  /* max-height: 100%; */
+  /* width: XYpx; */
+  /* height: XYpx; */
+  /* width: 60vw; */
+  /* height: 60vh; */
+  /* 40vmin; */
+  /* pointer-events: none; */
+}

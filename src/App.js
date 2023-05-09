@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import selfie from "./assets/selfie.jpg";
+import { ReactComponent as AcornSvg } from "./assets/acorn.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <TitleWithLine />
+        <div className="Image-container">
+          <img src={selfie} className="App-logo" alt="logo" />
+        </div>
+        <UnderConstruction />
       </header>
+    </div>
+  );
+}
+
+function TitleWithLine() {
+  return (
+    <div className="TitleWithLine">
+      <h1 id="title">JOSHUA ACHORN</h1>
+      <div class="vl"></div>
+      <h2 id="description">music - coding - design</h2>
+    </div>
+  );
+}
+
+function UnderConstruction() {
+  return (
+    <div className="Under-construction">
+      <h3 id="under-construction-text">UNDER </h3>
+      <AcornSvg className="Acorn-logo" />
+      <h3 id="under-construction-text"> CONSTRUCTION</h3>
     </div>
   );
 }
