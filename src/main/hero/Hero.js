@@ -3,7 +3,7 @@ import { ReactComponent as AcornMedleySvg } from "../../assets/acorn-medley.svg"
 import "./Hero.css";
 function HeroSection() {
   return (
-    <div className="Hero-section">
+    <div id="hero" className="Hero-section">
       <TitleWithLine />
       <div className="Image-container">
         <img src={selfie} className="Hero-image" alt="logo" />

@@ -13,8 +13,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* border-style: solid; */
-  /* border-color: blue; */
+  /* border-style: solid;
+  border-color: blue; */
 }
 
 .vl {
@@ -57,8 +57,8 @@
 }
 
 .Bottom-icon-container {
-  /* border-style: solid; */
-  /* border-color: blue; */
+  /* border-style: solid;
+  border-color: blue; */
   height: 25vh;
   display: flex;
   align-items: center;

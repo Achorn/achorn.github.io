@@ -1,0 +1,42 @@
+/* inspired by https://codesandbox.io/s/l5wnpyw6j7?file=/src/index.js */
+
+.Selectable-underline {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* padding: 10px; */
+  margin: 0 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.active {
+  /* border-bottom: 2px solid salmon; */
+  border-bottom: 2px solid #1f2425;
+}
+
+.Selectable-underline:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 10px;
+  right: 0;
+  /* background: salmon; */
+  background: #1f2425;
+  transition: width 0.25s ease;
+}
+
+.Selectable-underline:hover:after {
+  width: 100%;
+  left: 0;
+  /* background: salmon; */
+  background: #1f2425;
+}
+
+.active-container {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
