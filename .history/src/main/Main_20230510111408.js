@@ -15,7 +15,7 @@ function Main() {
 }
 
 function NavBar() {
-  return <div className="Nav-bar">home - music - coding - design</div>;
+  return <div className="Nav-bar">NavBar</div>;
 }
 
 function TopicSection() {
