@@ -18,6 +18,28 @@
   overflow: hidden;
 }
 
+.App-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Bottom-icon-container {
+  /* border-style: solid; */
+  /* border-color: blue; */
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Acorn-medley-svg {
+  height: 16vh;
+  width: auto;
+  fill: #1f2425;
+  /* fill: black; */
+}
+
 .Topic-section {
   /* border-style: solid; */
   /* border-color: blue; */

@@ -1,12 +1,11 @@
+import { ReactComponent as AcornSvg } from "../assets/acorn.svg";
 import "./Main.css";
 import HeroSection from "./hero/Hero";
-import UnderConstruction from "../components/display/under-construction/Under-construction";
 
 function Main() {
   return (
     <header className="Main-header">
       <HeroSection />
-      <NavBar />
       <TopicSection />
       <TopicSection />
       <TopicSection />
@@ -14,8 +13,14 @@ function Main() {
   );
 }
 
-function NavBar() {
-  return <div>NavBar</div>;
+function UnderConstruction() {
+  return (
+    <div className="Under-construction">
+      <h3 id="under-construction-text">UNDER </h3>
+      <AcornSvg className="Acorn-logo" />
+      <h3 id="under-construction-text"> CONSTRUCTION</h3>
+    </div>
+  );
 }
 
 function TopicSection() {

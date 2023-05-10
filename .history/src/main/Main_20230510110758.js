@@ -6,16 +6,11 @@ function Main() {
   return (
     <header className="Main-header">
       <HeroSection />
-      <NavBar />
       <TopicSection />
       <TopicSection />
       <TopicSection />
     </header>
   );
-}
-
-function NavBar() {
-  return <div>NavBar</div>;
 }
 
 function TopicSection() {

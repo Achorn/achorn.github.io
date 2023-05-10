@@ -1,21 +1,15 @@
 import "./Main.css";
 import HeroSection from "./hero/Hero";
 import UnderConstruction from "../components/display/under-construction/Under-construction";
-
 function Main() {
   return (
     <header className="Main-header">
       <HeroSection />
-      <NavBar />
       <TopicSection />
       <TopicSection />
       <TopicSection />
     </header>
   );
-}
-
-function NavBar() {
-  return <div>NavBar</div>;
 }
 
 function TopicSection() {
