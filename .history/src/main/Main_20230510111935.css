@@ -29,7 +29,6 @@
 }
 
 .Nav-bar {
-  /* backdrop-filter: blur(10px); */
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -38,30 +37,22 @@
   z-index: 10;
 
   min-width: 100vw;
-  height: 8vh;
-  /* border-style: solid; */
-  /* border-color: blue; */
+  height: 10vh;
+  /* border-style: solid;
+  border-color: blue; */
   position: sticky;
   top: 0;
 
   letter-spacing: 0.125vw;
   font-family: "caslon";
-  /* font-size: 1.5vw; */
+  font-size: 1.5vw;
   color: #000;
   font-style: italic;
   font-weight: 500;
   line-height: 18px;
   text-align: left;
-  /* width: 35vw; */
+  width: 35vw;
   text-transform: none;
 }
-
-.Nav-bar-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-width: 350px;
-  /* border-style: solid;
-  border-color: blue; */
 }
+

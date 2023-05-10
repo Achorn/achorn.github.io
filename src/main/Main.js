@@ -1,35 +1,63 @@
-import selfie from "../assets/selfie.jpg";
-import { ReactComponent as AcornSvg } from "../assets/acorn.svg";
 import "./Main.css";
-
+import HeroSection from "./hero/Hero";
+import UnderConstruction from "../components/display/under-construction/Under-construction";
+import SelectableUnderline from "../components/functional/Selectable-underline-button";
 function Main() {
   return (
     <header className="Main-header">
-      <TitleWithLine />
-      <div className="Image-container">
-        <img src={selfie} className="App-logo" alt="logo" />
-      </div>
-      <UnderConstruction />
+      <HeroSection />
+      <NavBar />
+      <TopicSection id="music" />
+      <TopicSection id="coding" />
+      <TopicSection id="design" />
     </header>
   );
 }
 
-function TitleWithLine() {
+const handleClick = (id) => {
+  // handle selection change //visible change to slected button
+
+  const element = document.getElementById(id);
+  if (element) {
+    // 👇 Will scroll smoothly to the top of the next section
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+
+  console.log("clicked");
+};
+
+function NavBar() {
   return (
-    <div className="TitleWithLine">
-      <h1 id="title">JOSHUA ACHORN</h1>
-      <div class="vl"></div>
-      <h2 id="description">music - coding - design</h2>
+    <div className="Nav-bar">
+      <div className="Nav-bar-container">
+        <SelectableUnderline
+          title={"home"}
+          handleClick={() => handleClick("hero")}
+        />
+        {"-"}
+        <SelectableUnderline
+          title={"music"}
+          handleClick={() => handleClick("music")}
+        />
+        {"-"}
+        <SelectableUnderline
+          title={"coding"}
+          handleClick={() => handleClick("coding")}
+        />
+        {"-"}
+        <SelectableUnderline
+          title={"design"}
+          handleClick={() => handleClick("design")}
+        />
+      </div>
     </div>
   );
 }
 
-function UnderConstruction() {
+function TopicSection({ id }) {
   return (
-    <div className="Under-construction">
-      <h3 id="under-construction-text">UNDER </h3>
-      <AcornSvg className="Acorn-logo" />
-      <h3 id="under-construction-text"> CONSTRUCTION</h3>
+    <div id={id} className="Topic-section">
+      <UnderConstruction />
     </div>
   );
 }
