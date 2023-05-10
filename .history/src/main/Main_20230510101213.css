@@ -124,6 +124,6 @@
 .Acorn-medley-svg {
   height: 16vh;
   width: auto;
-  fill: #1f2425;
-  /* fill: black; */
+  /* fill: #1f2425; */
+  fill: black;
 }

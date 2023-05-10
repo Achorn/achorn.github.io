@@ -1,6 +1,6 @@
 import selfie from "../assets/selfie.jpg";
 import { ReactComponent as AcornSvg } from "../assets/acorn.svg";
-import { ReactComponent as AcornMedleySvg } from "../assets/acorn-medley.svg";
+import { ReactComponent as AcornMedleySvg } from "../assets/acorns.svg";
 import "./Main.css";
 
 function Main() {

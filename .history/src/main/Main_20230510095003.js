@@ -10,7 +10,7 @@ function Main() {
       <div className="Image-container">
         <img src={selfie} className="App-logo" alt="logo" />
       </div>
-      <BottomIconContainer />
+      <AcornMedleySvg className="Acorn-medley-svg" />
       {/* <UnderConstruction /> */}
     </header>
   );
@@ -32,13 +32,6 @@ function UnderConstruction() {
       <h3 id="under-construction-text">UNDER </h3>
       <AcornSvg className="Acorn-logo" />
       <h3 id="under-construction-text"> CONSTRUCTION</h3>
-    </div>
-  );
-}
-function BottomIconContainer() {
-  return (
-    <div className="Bottom-icon-container">
-      <AcornMedleySvg className="Acorn-medley-svg" />
     </div>
   );
 }

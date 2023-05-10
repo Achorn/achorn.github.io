@@ -37,7 +37,7 @@ function UnderConstruction() {
 }
 function BottomIconContainer() {
   return (
-    <div className="Bottom-icon-container">
+    <div>
       <AcornMedleySvg className="Acorn-medley-svg" />
     </div>
   );

@@ -113,8 +113,8 @@
 }
 
 .Bottom-icon-container {
-  /* border-style: solid;
-  border-color: blue; */
+  border-style: solid;
+  border-color: blue;
   height: 25vh;
   display: flex;
   align-items: center;
@@ -122,8 +122,7 @@
 }
 
 .Acorn-medley-svg {
-  height: 16vh;
+  height: 10vh;
   width: auto;
-  fill: #1f2425;
-  /* fill: black; */
+  fill: black;
 }

@@ -112,18 +112,8 @@
   }
 }
 
-.Bottom-icon-container {
-  /* border-style: solid;
-  border-color: blue; */
-  height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .Acorn-medley-svg {
-  height: 16vh;
+  height: 5vw;
   width: auto;
-  fill: #1f2425;
-  /* fill: black; */
+  fill: black;
 }
