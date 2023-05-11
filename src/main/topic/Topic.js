@@ -13,7 +13,7 @@ export default function Topic({ title, description, icon }) {
         <h2 className="Topic-title">{title}</h2>
         <div className="Uc-container">
           <div className="Topic-uc">
-            <UnderConstruction description="Description" />
+            <UnderConstruction description="Description + Links" />
           </div>
 
           <div className="Description-container">
