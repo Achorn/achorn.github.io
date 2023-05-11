@@ -1,6 +1,6 @@
 .Topic-container {
-  border-style: solid;
-  border-color: green;
+  /* border-style: solid; */
+  /* border-color: green; */
   min-height: 60vh;
   width: 80vw;
   max-width: 1200px;
@@ -10,36 +10,74 @@
 }
 
 .Topic-image-container {
-  border-style: solid;
-  border-color: blue;
+  /* border-style: solid; */
+  /* border-color: blue; */
   height: 60vh;
   width: 60%;
   /* max-width: 400px; */
-  /* border-style: solid; */
-  /* border-color: green; */
   overflow: hidden;
 }
 
 .Topic-words-container {
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  border-style: solid;
-  border-color: red;
+  /* align-items: center; */
+  justify-content: space-around;
+  /* border-style: solid; */
+  /* border-color: red; */
   width: 100%;
+  height: auto;
+}
+.Topic-title {
+  margin: 0px;
+  /* border-style: solid; */
+  /* border-color: red; */
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  /* color: #000; */
+  line-height: 2.23vw;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* width: 35vw; */
+  /* text-align: right; */
+  letter-spacing: 0.39vw;
+  /* font-size: 1.6vw; */
+}
+
+.Topic-description {
+  /* border-style: solid; */
+  /* border-color: red; */
+  /* width: 70%; */
+  margin-left: 25px;
+  margin-right: 25px;
+  /* letter-spacing: 0.125vw; */
+  font-family: "caslon";
+  font-size: 29px;
+  /* color: #000; */
+  /* font-style: italic; */
+  font-weight: 500;
+  /* line-height: 18px; */
+  /* text-align: left; */
+  /* width: 35vw; */
+  /* text-transform: none; */
 }
 
 .Learn-more-container {
-  border-style: solid;
-  border-color: green;
+  /* border-style: solid; */
+  /* border-color: green; */
   display: flex;
   flex-direction: Row;
+  align-items: center;
+  justify-content: center;
 }
 
 .Description-container {
-  border-style: solid;
+  /* border-style: solid; */
   display: flex;
   flex-grow: 1;
-  border-color: purple;
+  /* border-color: purple; */
 }
 
 @media only screen and (max-width: 940px) {
@@ -52,13 +90,16 @@
   }
 
   .Topic-image-container {
-    border-style: solid;
-    border-color: blue;
-    height: 45vh;
+    /* border-style: solid; */
+    /* border-color: blue; */
+    height: 40vh;
     /* width: 70v; */
     width: 100%;
     /* max-width: 500px; */
     /* border-style: solid; */
     /* border-color: green; */
+  }
+  .Topic-words-container {
+    padding-left: 0px;
   }
 }
