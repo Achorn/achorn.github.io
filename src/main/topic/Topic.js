@@ -21,11 +21,11 @@ export default function Topic() {
         </div>
         <div className="Learn-more-container">
           <div>
-            <Acorn />
+            <Acorn height={"50px"} />
           </div>
 
-          <p>Learn more</p>
-          <div>{/* <FiChevronRight /> */}</div>
+          {/* <p>Learn more</p> */}
+          <div>{<FiChevronRight height={"50px"} />}</div>
         </div>
       </div>
     </div>
