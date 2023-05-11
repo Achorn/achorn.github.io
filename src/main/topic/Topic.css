@@ -1,0 +1,64 @@
+.Topic-container {
+  border-style: solid;
+  border-color: green;
+  min-height: 60vh;
+  width: 80vw;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: Row;
+  /* align-items: center; */
+}
+
+.Topic-image-container {
+  border-style: solid;
+  border-color: blue;
+  height: 60vh;
+  width: 60%;
+  /* max-width: 400px; */
+  /* border-style: solid; */
+  /* border-color: green; */
+  overflow: hidden;
+}
+
+.Topic-words-container {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: red;
+  width: 100%;
+}
+
+.Learn-more-container {
+  border-style: solid;
+  border-color: green;
+  display: flex;
+  flex-direction: Row;
+}
+
+.Description-container {
+  border-style: solid;
+  display: flex;
+  flex-grow: 1;
+  border-color: purple;
+}
+
+@media only screen and (max-width: 940px) {
+  .Topic-container {
+    margin-top: 8vh;
+    /* max-width: 700px; */
+    width: 70v;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Topic-image-container {
+    border-style: solid;
+    border-color: blue;
+    height: 45vh;
+    /* width: 70v; */
+    width: 100%;
+    /* max-width: 500px; */
+    /* border-style: solid; */
+    /* border-color: green; */
+  }
+}
