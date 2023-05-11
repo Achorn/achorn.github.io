@@ -25,9 +25,39 @@ function Main() {
         handleClick={(value) => handleClick(value)}
         selectedId={selectedId}
       />
-      <TopicSection id="music" />
-      <TopicSection id="coding" />
-      <TopicSection id="design" />
+      <TopicSection
+        id="music"
+        child={
+          <Topic
+            title={"MUSIC"}
+            description={
+              "My first(and longest standing) passion.  Expressing myself with music Expressing myself with music Expressing myself with music Expressing myself with music Expressing myself with musicExpressing myself with music"
+            }
+          />
+        }
+      />
+      <TopicSection
+        id="coding"
+        child={
+          <Topic
+            title={"CODING"}
+            description={
+              "First thing to know about me when it comes to coding. I love clean readable code.  to coding. I love clean readable code.  to coding. I love clean readable code.  to coding. I love clean readable code. "
+            }
+          />
+        }
+      />
+      <TopicSection
+        id="design"
+        child={
+          <Topic
+            title={"DESIGN"}
+            description={
+              "Along with music, historically, I've mostly been focussed on art. drawing, painting, anything where im physically using my hands to create something with colors or materials. hands to create something with colors or materials hands to create something with colors or "
+            }
+          />
+        }
+      />
     </header>
   );
 }
@@ -65,10 +95,10 @@ function NavBar({ handleClick, selectedId }) {
   );
 }
 
-function TopicSection({ id }) {
+function TopicSection({ id, child }) {
   return (
     <div id={id} className="Topic-section">
-      <Topic />
+      {child}
     </div>
   );
 }
