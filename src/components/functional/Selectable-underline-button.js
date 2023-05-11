@@ -2,9 +2,14 @@ import "./Selectable-underline-button.css";
 
 function SelectableUnderline({ id, title, isSelected, handleClick }) {
   return (
-    <p className="Selectable-underline" onClick={handleClick}>
-      {title}
-    </p>
+    <div className="active-container">
+      <p
+        className={`Selectable-underline ${isSelected ? "active" : null}`}
+        onClick={handleClick}
+      >
+        {title}
+      </p>
+    </div>
   );
 }
 export default SelectableUnderline;

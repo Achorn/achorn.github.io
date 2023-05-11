@@ -25,6 +25,8 @@
 }
 
 #title {
+  /* border-style: solid;
+  border-color: blue; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
   color: #000;
