@@ -1,9 +1,8 @@
 import "./Topic.css";
 import design from "../../assets/design.jpg";
-import { ReactComponent as Acorn } from "../../assets/acorn.svg";
 import { FiChevronRight } from "react-icons/fi";
 
-export default function Topic({ image, title, description, icon }) {
+export default function Topic({ image, title, description, Icon }) {
   return (
     <div className="Topic-container">
       <div className="Topic-image-container">
@@ -21,7 +20,8 @@ export default function Topic({ image, title, description, icon }) {
         </div>
 
         <div className="Learn-more-container">
-          <Acorn className="Topic-icon" />
+          <Icon className="Topic-icon" />
+          {/* <Acorn className="Topic-icon" /> */}
 
           <FiChevronRight color="#1f2425" size={40} className="Topic-arrow" />
         </div>
