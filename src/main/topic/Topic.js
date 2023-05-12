@@ -20,9 +20,13 @@ export default function Topic({ image, title, description, Icon }) {
         </div>
 
         <div className="Learn-more-container">
-          <Icon className="Topic-icon" />
-          {/* <Acorn className="Topic-icon" /> */}
-
+          <FiChevronRight
+            color="#1f2425"
+            size={40}
+            className="Topic-arrow"
+            style={{ opacity: 0 }}
+          />
+          {Icon}
           <FiChevronRight color="#1f2425" size={40} className="Topic-arrow" />
         </div>
       </div>

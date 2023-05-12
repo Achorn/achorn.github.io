@@ -5,7 +5,10 @@ import JoshWithGuitar from "../assets/josh-with-guitar.jpg";
 import Topic from "./topic/Topic";
 import SelectableUnderline from "../components/functional/Selectable-underline-button";
 import { ReactComponent as Acorn } from "../assets/acorn.svg";
+import { ReactComponent as FlowerIcon } from "../assets/flower-icon.svg";
 
+import { ReactComponent as GuitarIcon } from "../assets/guitar-icon.svg";
+import { ReactComponent as KeyboardIcon } from "../assets/keyboard-icon.svg";
 import { useState } from "react";
 
 function Main() {
@@ -33,7 +36,7 @@ function Main() {
         id="music"
         child={
           <Topic
-            Icon={Acorn}
+            Icon={<GuitarIcon style={{ height: 90, width: "auto" }} />}
             image={JoshWithGuitar}
             title={"MUSIC"}
             description={
@@ -46,7 +49,7 @@ function Main() {
         id="coding"
         child={
           <Topic
-            Icon={Acorn}
+            Icon={<KeyboardIcon style={{ height: 50, width: "auto" }} />}
             title={"CODING"}
             description={
               "The cross section between computer science and art. As someone who loves both creating, and solving sudoku puzzles, coding scratches both of these itches. I'm primarily a front end developer with some experience in backend. I enjoy writing clean, readable and maintainable code, while using the MVVM pattern to separate the business logic, models, and the views. Languages and frameworks I’ve used professionally are Flutter, Dart, React, Javascript."
@@ -58,7 +61,7 @@ function Main() {
         id="design"
         child={
           <Topic
-            Icon={Acorn}
+            Icon={<FlowerIcon style={{ height: 120, width: "auto" }} />}
             title={"DESIGN"}
             description={
               "I love working with my hands, whether it be, drawing, painting, analog, digital, building . restoring, etc. This topic is pretty broad so I'm going to be dumping a hodgepodge of my interest in this link. I’ll keep the professional pieces at the top though ;)"
