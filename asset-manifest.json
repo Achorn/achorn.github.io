@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.f19f170a.css",
-    "main.js": "/static/js/main.762b14d8.js",
+    "main.css": "/static/css/main.4a8c4d8c.css",
+    "main.js": "/static/js/main.e609234f.js",
     "static/js/787.c9df9596.chunk.js": "/static/js/787.c9df9596.chunk.js",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
     "static/media/selfie.jpg": "/static/media/selfie.e14b857f95e1b1ddf513.jpg",
     "static/media/josh-with-guitar.jpg": "/static/media/josh-with-guitar.ae46125e4f478a438056.jpg",
     "static/media/acorn-medley.svg": "/static/media/acorn-medley.680ad2287dae111095a76619c482f98f.svg",
+    "static/media/keyboard-icon.svg": "/static/media/keyboard-icon.698d1ab67baf4619cc1acb447a7aa4eb.svg",
+    "static/media/guitar-icon.svg": "/static/media/guitar-icon.07cc2d5e08adbe1ba9c78c4dfadd9c81.svg",
+    "static/media/flower-icon.svg": "/static/media/flower-icon.95df13627a46a49ea8e7ddfc22e0b764.svg",
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
-    "main.f19f170a.css.map": "/static/css/main.f19f170a.css.map",
-    "main.762b14d8.js.map": "/static/js/main.762b14d8.js.map",
+    "main.4a8c4d8c.css.map": "/static/css/main.4a8c4d8c.css.map",
+    "main.e609234f.js.map": "/static/js/main.e609234f.js.map",
     "787.c9df9596.chunk.js.map": "/static/js/787.c9df9596.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f19f170a.css",
-    "static/js/main.762b14d8.js"
+    "static/css/main.4a8c4d8c.css",
+    "static/js/main.e609234f.js"
   ]
 }
