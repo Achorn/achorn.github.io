@@ -1,5 +1,5 @@
-import selfie from "../../assets/selfie.jpg";
-import { ReactComponent as AcornMedleySvg } from "../../assets/acorn-medley.svg";
+import selfie from "../../../assets/selfie.jpg";
+import { ReactComponent as AcornMedleySvg } from "../../../assets/acorn-medley.svg";
 import "./Hero.css";
 function HeroSection() {
   return (

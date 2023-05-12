@@ -4,7 +4,12 @@ import "./Under-construction.css";
 function UnderConstruction({ description = "" }) {
   return (
     <div className="Under-construction">
-      <h3>{description}</h3>
+      <h2
+        id="under-construction-text"
+        style={{ fontweight: 600, fontSize: "40Px" }}
+      >
+        {description}
+      </h2>
       <div className="Construction-stamp">
         <h3 id="under-construction-text">UNDER </h3>
         <AcornSvg className="Acorn-logo" />
