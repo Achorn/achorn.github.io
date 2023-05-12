@@ -4,7 +4,10 @@ function SelectableUnderline({ id, title, isSelected, handleClick }) {
   return (
     <div className="active-container">
       <p
-        className={`Selectable-underline ${isSelected ? "active" : null}`}
+        className={
+          `Selectable-underline`
+          //  ${isSelected ? "active" : null}`
+        }
         onClick={handleClick}
       >
         {title}

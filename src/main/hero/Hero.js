@@ -18,7 +18,7 @@ function TitleWithLine() {
     <div className="TitleWithLine">
       <h1 id="title">JOSHUA ACHORN</h1>
       <div class="vl"></div>
-      <h2 id="description">music - coding - design</h2>
+      <h2 id="description">music - coding - art</h2>
     </div>
   );
 }
