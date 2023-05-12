@@ -1,13 +1,13 @@
 import "./Main.css";
 import HeroSection from "./hero/Hero";
-import JoshWithGuitar from "../assets/josh-with-guitar.jpg";
+import JoshWithGuitar from "../../assets/josh-with-guitar.jpg";
+import Navbar from "./nav/Navbar";
 
 import Topic from "./topic/Topic";
-import SelectableUnderline from "../components/functional/Selectable-underline-button";
-import { ReactComponent as FlowerIcon } from "../assets/flower-icon.svg";
 
-import { ReactComponent as GuitarIcon } from "../assets/guitar-icon.svg";
-import { ReactComponent as KeyboardIcon } from "../assets/keyboard-icon.svg";
+import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
+import { ReactComponent as GuitarIcon } from "../../assets/guitar-icon.svg";
+import { ReactComponent as KeyboardIcon } from "../../assets/keyboard-icon.svg";
 // import { useState } from "react";
 
 function Main() {
@@ -27,7 +27,7 @@ function Main() {
   return (
     <header className="Main-header">
       <HeroSection />
-      <NavBar handleClick={(value) => handleClick(value)} />
+      <Navbar handleClick={(value) => handleClick(value)} />
       <TopicSection
         id="music"
         child={
@@ -66,34 +66,6 @@ function Main() {
         }
       />
     </header>
-  );
-}
-
-function NavBar({ handleClick }) {
-  return (
-    <div className="Nav-bar">
-      <div className="Nav-bar-container">
-        <SelectableUnderline
-          title={"home"}
-          handleClick={() => handleClick("hero")}
-        />
-        <p>-</p>
-        <SelectableUnderline
-          title={"music"}
-          handleClick={() => handleClick("music")}
-        />
-        <p>-</p>
-        <SelectableUnderline
-          title={"coding"}
-          handleClick={() => handleClick("coding")}
-        />
-        <p>-</p>
-        <SelectableUnderline
-          title={"art"}
-          handleClick={() => handleClick("art")}
-        />
-      </div>
-    </div>
   );
 }
 

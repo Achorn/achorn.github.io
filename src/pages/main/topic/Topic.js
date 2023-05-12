@@ -1,5 +1,5 @@
 import "./Topic.css";
-import design from "../../assets/design.jpg";
+import design from "../../../assets/design.jpg";
 import { FiChevronRight } from "react-icons/fi";
 
 export default function Topic({ image, title, description, Icon }) {
