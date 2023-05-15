@@ -2,7 +2,7 @@ import "./Main.css";
 import HeroSection from "./hero/Hero";
 import JoshWithGuitar from "../../assets/josh-with-guitar.jpg";
 import Navbar from "./nav/Navbar";
-
+import Footer from "./../../components/display/footer/Footer";
 import Topic from "./topic/Topic";
 
 import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
@@ -65,6 +65,7 @@ function Main() {
           />
         }
       />
+      <Footer />
     </header>
   );
 }
