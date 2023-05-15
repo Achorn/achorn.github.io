@@ -65,6 +65,7 @@ function Main() {
           />
         }
       />
+      <Footer />
     </header>
   );
 }
@@ -77,4 +78,13 @@ function TopicSection({ id, child }) {
   );
 }
 
+function Footer() {
+  return (
+    <div className="Footer">
+      <hr />
+      <h1>WHAT'S NEXT</h1>
+      Icons
+    </div>
+  );
+}
 export default Main;
