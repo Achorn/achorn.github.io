@@ -1,0 +1,44 @@
+.Footer {
+  width: 100vw;
+  /* background-color: pink; */
+  /* display: flex; */
+
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
+
+hr {
+  width: 98vw;
+  border: 0;
+  border-top: 1px solid #bcbcbc;
+}
+.Footer-header {
+  /* background-color: orange; */
+  text-align: center;
+  margin-top: 85px;
+  margin-bottom: 85px;
+  line-height: 24px;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.Footer-logo {
+  /* padding: 1.5vw; */
+  /* border-style: solid; */
+  /* border-color: blue; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  fill: #bbbbbb;
+
+  height: 20px;
+
+  min-height: 40px;
+  width: auto;
+  /* fill: black; */
+}
+
+.Footer-bottom-text {
+  font-size: 11px;
+
+  color: #bbbbbb;
+}
