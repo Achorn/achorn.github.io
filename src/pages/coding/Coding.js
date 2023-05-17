@@ -5,31 +5,49 @@ import aircoverImg from "../../assets/img/aircover.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
-
+import cleanCodeCover from "../../assets/img/clean-code-cover.jpg";
+import HeroSection from "../main/hero/Hero";
+import { ReactComponent as KeyboardSvg } from "../../assets/keyboard-icon.svg";
+import codingImg from "../../assets/img/coding-img-2.jpeg";
 const Coding = () => {
   return (
     <div className="Coding-page">
-      <Title />
+      <HeroSection
+        description={"coding"}
+        image={codingImg}
+        bottomIcon={KeyboardSvg}
+      />
       <Inspo />
+      <SectionDivider />
+
       <Skills />
+      <SectionDivider />
+
       <JobHistory />
-      <Projects />
+
+      {/* <Projects /> */}
       <Footer />
     </div>
   );
 };
 
-function Title() {
-  return <h1>Coding</h1>;
-}
-
 function Inspo() {
   return (
-    <div>
-      <div>image</div>
-      <div>
-        <div>Clean Code</div>
-        <div> Description</div>
+    <div className="Inspo-container">
+      {/* <div className="Section-title">INSPIRATION</div> */}
+      <div className="Inspo-image-container">
+        <img src={cleanCodeCover} className="Inspo-image" alt="clean-code" />
+      </div>
+      <div className="Inspo-written-content">
+        <div className="Section-title">INSPIRATION</div>
+        {/* <hr style={{ width: "60px" }} /> */}
+        <div className="Inspo-description">
+          I want to acknowledge this book as it was one of the catalysts in my
+          career. These ideas improved my code instantly, and is a great
+          starting point for anyone looking make their coding experience
+          "smoother". These ideas helped me fix issues that I always dealt yet
+          didnt know how to put a name to them. Thanks Robert.
+        </div>
       </div>
     </div>
   );
@@ -37,17 +55,18 @@ function Inspo() {
 
 function Skills() {
   return (
-    <div>
-      <h1>Skills</h1>
-      <h2>Flutter, Dart, React, JavaScript, Go, AWS</h2>
+    <div className="Section-container">
+      <div className="Section-title">SKILLS</div>
+      <div>Flutter, Dart, React, JavaScript, Go, AWS</div>
     </div>
   );
 }
 
 function JobHistory() {
   return (
-    <div className="Job-history-container">
-      <h2>Job History</h2>
+    <div className="Section-container">
+      {/* <div className="Job-history-container"> */}
+      <div className="Section-title">JOB HISTORY</div>
       <JobComponent
         date={"Sep 2021 - May 2023 · 1 yr 9 mos"}
         className="Job-component"
@@ -117,8 +136,16 @@ function JobComponent({ date, image, company, title, description }) {
 function ConnectorLine() {
   return <div className="Connector-line"></div>;
 }
-function Projects() {
-  return <h2>Projects</h2>;
+// function Projects() {
+//   return <h2>Projects</h2>;
+// }
+
+function SectionDivider() {
+  return (
+    <div style={{ marginTop: "30px", marginBottom: "40px" }}>
+      <hr style={{ width: "65vw" }} />
+    </div>
+  );
 }
 
 export default Coding;

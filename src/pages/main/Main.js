@@ -4,6 +4,8 @@ import JoshWithGuitar from "../../assets/josh-with-guitar.jpg";
 import Navbar from "./nav/Navbar";
 import Footer from "./../../components/display/footer/Footer";
 import Topic from "./topic/Topic";
+import { ReactComponent as AcornMedleySvg } from "../../assets/acorn-medley.svg";
+import selfie from "../../assets/selfie.jpg";
 
 import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
 import { ReactComponent as GuitarIcon } from "../../assets/guitar-icon.svg";
@@ -26,7 +28,11 @@ function Main() {
 
   return (
     <header className="Main-header">
-      <HeroSection />
+      <HeroSection
+        image={selfie}
+        description={"music - coding - art"}
+        bottomIcon={AcornMedleySvg}
+      />
       <Navbar handleClick={(value) => handleClick(value)} />
       <TopicSection
         id="music"

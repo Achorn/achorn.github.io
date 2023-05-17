@@ -13,8 +13,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* border-style: solid;
-  border-color: blue; */
+  /* border-style: solid; */
+  /* border-color: blue; */
 }
 
 .vl {
@@ -25,8 +25,8 @@
 }
 
 #title {
-  /* border-style: solid;
-  border-color: blue; */
+  /* border-style: solid; */
+  /* border-color: blue; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
   color: #000;
@@ -59,15 +59,16 @@
 }
 
 .Bottom-icon-container {
-  /* border-style: solid;
-  border-color: blue; */
+  /* outline-style: solid; */
+  /* outline-color: blue; */
   height: 25vh;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Acorn-medley-svg {
+.Icon-svg {
   height: 16vh;
   width: auto;
   fill: #1f2425;
