@@ -1,5 +1,6 @@
 .Nav-bar {
   /* backdrop-filter: blur(10px); */
+  /* background-color: pink; */
   background-color: white;
   display: flex;
   flex-direction: row;
