@@ -1,11 +1,20 @@
 import SelectableUnderline from "../../../components/functional/Selectable-underline-button";
 import "./Navbar.css";
 
-export default function NavBar({ handleClick }) {
+export default function NavBar({ navList, handleClick }) {
   return (
     <div className="Nav-bar">
       <div className="Nav-bar-container">
-        <SelectableUnderline
+        {navList.map((item, index) => (
+          // <div>
+          // {index === 0 ? <div /> : <p>-</p>}
+          <SelectableUnderline
+            title={item}
+            handleClick={() => handleClick(item)}
+          />
+          // </div>
+        ))}
+        {/* <SelectableUnderline
           title={"home"}
           handleClick={() => handleClick("hero")}
         />
@@ -23,7 +32,7 @@ export default function NavBar({ handleClick }) {
         <SelectableUnderline
           title={"art"}
           handleClick={() => handleClick("art")}
-        />
+        /> */}
       </div>
     </div>
   );

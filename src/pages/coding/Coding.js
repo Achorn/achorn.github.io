@@ -9,7 +9,20 @@ import cleanCodeCover from "../../assets/img/clean-code-cover.jpg";
 import HeroSection from "../main/hero/Hero";
 import { ReactComponent as KeyboardSvg } from "../../assets/keyboard-icon.svg";
 import codingImg from "../../assets/img/coding-img-2.jpeg";
+import NavBar from "../main/nav/Navbar";
+import UnderConstruction from "../../components/display/under-construction/Under-construction";
 const Coding = () => {
+  const handleClick = (id) => {
+    // handle selection change //visible change to selected button
+    const element = document.getElementById(id);
+    if (element) {
+      // setSelectedId(id);
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+
+    console.log("clicked");
+  };
+
   return (
     <div className="Coding-page">
       <HeroSection
@@ -17,15 +30,14 @@ const Coding = () => {
         image={codingImg}
         bottomIcon={KeyboardSvg}
       />
+      <NavBar
+        navList={["inspiration", "skills", "job history", "projects"]}
+        handleClick={(value) => handleClick(value)}
+      />
       <Inspo />
-      <SectionDivider />
-
-      <Skills />
-      <SectionDivider />
-
-      <JobHistory />
-
-      {/* <Projects /> */}
+      <Skills id="skills" />
+      <JobHistory id="job history" />
+      <Projects />
       <Footer />
     </div>
   );
@@ -33,20 +45,23 @@ const Coding = () => {
 
 function Inspo() {
   return (
-    <div className="Inspo-container">
-      {/* <div className="Section-title">INSPIRATION</div> */}
-      <div className="Inspo-image-container">
-        <img src={cleanCodeCover} className="Inspo-image" alt="clean-code" />
-      </div>
-      <div className="Inspo-written-content">
-        <div className="Section-title">INSPIRATION</div>
-        {/* <hr style={{ width: "60px" }} /> */}
-        <div className="Inspo-description">
-          I want to acknowledge this book as it was one of the catalysts in my
-          career. These ideas improved my code instantly, and is a great
-          starting point for anyone looking make their coding experience
-          "smoother". These ideas helped me fix issues that I always dealt yet
-          didnt know how to put a name to them. Thanks Robert.
+    <div id="inspiration">
+      <SectionDivider />
+      <div className="Inspo-container">
+        {/* <div className="Section-title">INSPIRATION</div> */}
+        <div className="Inspo-image-container">
+          <img src={cleanCodeCover} className="Inspo-image" alt="clean-code" />
+        </div>
+        <div className="Inspo-written-content">
+          <div className="Section-title">INSPIRATION</div>
+          {/* <hr style={{ width: "60px" }} /> */}
+          <div className="Inspo-description">
+            I want to acknowledge this book as it was one of the catalysts in my
+            career. These ideas improved my code instantly, and is a great
+            starting point for anyone looking make their coding experience
+            "smoother". These ideas helped me fix issues that I always dealt yet
+            didn't know how to put a name to them. Thanks Robert.
+          </div>
         </div>
       </div>
     </div>
@@ -55,7 +70,9 @@ function Inspo() {
 
 function Skills() {
   return (
-    <div className="Section-container">
+    <div className="Section-container" id="skills">
+      <SectionDivider />
+
       <div className="Section-title">SKILLS</div>
       <div>Flutter, Dart, React, JavaScript, Go, AWS</div>
     </div>
@@ -64,8 +81,8 @@ function Skills() {
 
 function JobHistory() {
   return (
-    <div className="Section-container">
-      {/* <div className="Job-history-container"> */}
+    <div className="Section-container" id="job history">
+      <SectionDivider />
       <div className="Section-title">JOB HISTORY</div>
       <JobComponent
         date={"Sep 2021 - May 2023 · 1 yr 9 mos"}
@@ -136,9 +153,19 @@ function JobComponent({ date, image, company, title, description }) {
 function ConnectorLine() {
   return <div className="Connector-line"></div>;
 }
-// function Projects() {
-//   return <h2>Projects</h2>;
-// }
+function Projects() {
+  return (
+    <div id="projects">
+      <SectionDivider />
+      <div>
+        <div className="Section-title">PROJECTS</div>
+        <div style={{ padding: "40px", margin: "10px" }}>
+          <UnderConstruction />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function SectionDivider() {
   return (

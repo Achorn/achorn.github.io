@@ -33,7 +33,10 @@ function Main() {
         description={"music - coding - art"}
         bottomIcon={AcornMedleySvg}
       />
-      <Navbar handleClick={(value) => handleClick(value)} />
+      <Navbar
+        navList={["home", "music", "coding", "art"]}
+        handleClick={(value) => handleClick(value)}
+      />
       <TopicSection
         id="music"
         child={
