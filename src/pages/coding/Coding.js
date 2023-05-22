@@ -59,8 +59,8 @@ function Inspo() {
             I want to acknowledge this book as it was one of the catalysts in my
             career. These ideas improved my code instantly, and is a great
             starting point for anyone looking make their coding experience
-            "smoother". These ideas helped me fix issues that I always dealt yet
-            didn't know how to put a name to them. Thanks Robert.
+            "smoother". These ideas helped me fix issues that I always dealt
+            with, but didn't know how to put a name to them yet. Thanks Robert.
           </div>
         </div>
       </div>
