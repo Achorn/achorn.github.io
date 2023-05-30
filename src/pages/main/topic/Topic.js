@@ -11,6 +11,7 @@ export default function Topic({ image, title, description, Icon }) {
           src={image != null ? image : design}
           className="Hero-image"
           alt="logo"
+          loading="lazy"
         />
       </div>
       <div className="Topic-words-container">

@@ -3,6 +3,7 @@ import { ReactComponent as AcornIcon } from "../../../assets/acorn.svg";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -24,6 +25,7 @@ export default function Footer() {
             "https://open.spotify.com/artist/2I7bTFn5ntjzJvDhzHnaWp?si=lhLz0-gJShmtsLvEZRq9RQ"
           }
         />
+        <SocialButton Icon={FaGithub} link={"https://github.com/Achorn"} />
         {/* Instagram - linkedIn - Spotify */}
       </div>
       <AcornIcon className="Footer-logo" />
@@ -38,7 +40,7 @@ function SocialButton({ Icon, link }) {
   return (
     <div className="Social-media-button">
       <a href={link} target="_blank" rel="noreferrer">
-        <Icon />
+        <Icon size="30px" />
       </a>
     </div>
   );

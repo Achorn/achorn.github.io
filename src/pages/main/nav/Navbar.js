@@ -9,6 +9,7 @@ export default function NavBar({ navList, handleClick }) {
           // <div>
           // {index === 0 ? <div /> : <p>-</p>}
           <SelectableUnderline
+            key={index}
             title={item}
             handleClick={() => handleClick(item)}
           />
