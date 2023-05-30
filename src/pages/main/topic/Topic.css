@@ -10,6 +10,8 @@
 }
 
 .Topic-image-container {
+  background-color: #f1f1fa;
+
   /* border-style: solid; */
   /* border-color: blue; */
   height: 60vh;

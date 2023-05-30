@@ -8,7 +8,7 @@ import cuBoulderImg from "../../assets/img/cu-boulder.png";
 import cleanCodeCover from "../../assets/img/clean-code-cover.jpg";
 import HeroSection from "../main/hero/Hero";
 import { ReactComponent as KeyboardSvg } from "../../assets/keyboard-icon.svg";
-import codingImg from "../../assets/img/coding-img-2.jpeg";
+import codingImg from "../../assets/img/red-blue-coding.JPG";
 import NavBar from "../main/nav/Navbar";
 import UnderConstruction from "../../components/display/under-construction/Under-construction";
 const Coding = () => {

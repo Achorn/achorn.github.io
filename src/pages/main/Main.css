@@ -11,6 +11,7 @@
 }
 
 .Image-container {
+  background-color: #f1f1fa;
   height: 60vh;
   width: 60vw;
   /* border-style: solid; */
