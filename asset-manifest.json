@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.c720016e.css",
-    "main.js": "/static/js/main.efc9051d.js",
+    "main.css": "/static/css/main.c0bab9a6.css",
+    "main.js": "/static/js/main.967fd563.js",
     "static/js/787.c9df9596.chunk.js": "/static/js/787.c9df9596.chunk.js",
+    "static/media/red-blue-coding.JPG": "/static/media/red-blue-coding.1268a11fd52e5ce4ff1e.JPG",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
-    "static/media/selfie.jpg": "/static/media/selfie.e14b857f95e1b1ddf513.jpg",
-    "static/media/coding-img-2.jpeg": "/static/media/coding-img-2.8ee6196c07dbc3735efc.jpeg",
-    "static/media/josh-with-guitar.jpg": "/static/media/josh-with-guitar.ae46125e4f478a438056.jpg",
     "static/media/cu-boulder.png": "/static/media/cu-boulder.6017f7e409ea3e92c762.png",
     "static/media/myadcenter.jpg": "/static/media/myadcenter.8945d3baff823e1510f2.jpg",
     "static/media/clean-code-cover.jpg": "/static/media/clean-code-cover.471473b762443f6030f7.jpg",
@@ -17,12 +15,12 @@
     "static/media/flower-icon.svg": "/static/media/flower-icon.95df13627a46a49ea8e7ddfc22e0b764.svg",
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
-    "main.c720016e.css.map": "/static/css/main.c720016e.css.map",
-    "main.efc9051d.js.map": "/static/js/main.efc9051d.js.map",
+    "main.c0bab9a6.css.map": "/static/css/main.c0bab9a6.css.map",
+    "main.967fd563.js.map": "/static/js/main.967fd563.js.map",
     "787.c9df9596.chunk.js.map": "/static/js/787.c9df9596.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c720016e.css",
-    "static/js/main.efc9051d.js"
+    "static/css/main.c0bab9a6.css",
+    "static/js/main.967fd563.js"
   ]
 }
