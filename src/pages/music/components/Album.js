@@ -45,18 +45,20 @@ import "./Album.css";
 //   }
 // }
 
-const Album = ({ cover, vinyl, handleClick }) => {
+const Album = ({ cover, vinyl, link }) => {
   return (
     <div className="Album-container">
-      <div className="Album">
-        <img className="Vinyl" src={vinyl} alt="Vinyl Cover" />
-        <img
-          className="Cover"
-          src={cover}
-          // onLoad={this.state.handleImageLoaded}
-          alt="albumCover"
-        />
-      </div>
+      <a href={link} target="_blank" rel="noreferrer">
+        <div className="Album">
+          <img className="Vinyl" src={vinyl} alt="Vinyl Cover" />
+          <img
+            className="Cover"
+            src={cover}
+            // onLoad={this.state.handleImageLoaded}
+            alt="albumCover"
+          />
+        </div>
+      </a>
     </div>
   );
 };
