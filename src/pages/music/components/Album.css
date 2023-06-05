@@ -1,7 +1,9 @@
 .Album-container {
   /* background-color: red; */
-  /* display: "flex"; */
-  /* justifyContent: "space-around"; */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
   width: 550px;
   /* height: auto; */
   overflow: visible;
