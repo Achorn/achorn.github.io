@@ -1,0 +1,39 @@
+.Album-container {
+  /* background-color: red; */
+  /* display: "flex"; */
+  /* justifyContent: "space-around"; */
+  width: 100%;
+  /* height: auto; */
+  overflow: visible;
+  height: 400px;
+  margin: "20px";
+  display: inline-block;
+  /* aspect-ratio: 550/400; */
+}
+
+.Album {
+  /* background-color: pink; */
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transition: 550ms;
+  top: 0;
+}
+.Album:hover {
+  width: 550px;
+  cursor: pointer;
+  top: -5px;
+}
+
+.Cover {
+  border-radius: 2.5px;
+  height: 100%;
+  position: absolute;
+  float: left;
+  left: 0;
+}
+.Vinyl {
+  /* position: relative; */
+  height: 100%;
+  float: right;
+}

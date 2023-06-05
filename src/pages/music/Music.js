@@ -1,11 +1,15 @@
 import React from "react";
-import UnderConstruction from "../../components/display/under-construction/Under-construction";
 import "./Music.css";
-
+import Album from "./components/Album";
 const Music = () => {
+  let album2 = {
+    vinyl: require("../../assets/img/albums/redVinyl.png"),
+    cover: require("../../assets/img/albums/tourguide.jpg"),
+  };
   return (
     <div className="Music-page">
-      <UnderConstruction description="Music Page" />
+      music page
+      <Album vinyl={album2.vinyl} cover={album2.cover} />
     </div>
   );
 };
