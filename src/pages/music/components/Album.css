@@ -4,25 +4,30 @@
 
   align-items: center;
   justify-content: center;
-  width: 550px;
-  /* height: auto; */
+  max-width: 400px;
+  width: 80vw;
+  height: 100%;
+  height: auto;
   overflow: visible;
-  height: 400px;
+  /* height: 400px; */
   margin: "20px";
   display: inline-block;
-  /* aspect-ratio: 550/400; */
+  aspect-ratio: 550/400;
 }
 
 .Album {
   /* background-color: pink; */
-  width: 400px;
-  height: 400px;
+  width: auto;
+  /* height: 100%; */
+  height: 100%;
   position: relative;
   transition: 550ms;
+  /* opacity: 0.5; */
   top: 0;
+  aspect-ratio: 1/1;
 }
 .Album:hover {
-  width: 550px;
+  aspect-ratio: 550/400;
   cursor: pointer;
   top: -5px;
 }
