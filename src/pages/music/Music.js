@@ -14,6 +14,8 @@ const Music = () => {
         image={musicImage}
         bottomIcon={GuitarSvg}
       />
+      <SectionDivider />
+
       <Albums />
     </div>
   );
@@ -37,7 +39,7 @@ const Albums = () => {
   };
   return (
     <div>
-      <h2>Albums</h2>
+      <div className="Section-title">ALBUMS</div>
       <div className="Album-section">
         <AlbumSection
           title="TOUR GUIDE"
