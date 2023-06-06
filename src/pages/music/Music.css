@@ -8,7 +8,83 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   /* width: 80vw; */
   /* font-size: calc(10px + 2vmin); */
+}
+
+.Album-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: pink; */
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.Album-section-container {
+  /* background-color: orange; */
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 800px;
+  width: 90vw;
+}
+
+.Album-description-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  /* background-color: pink; */
+}
+
+.Album-holder {
+  /* background-color: red; */
+  width: 60%;
+}
+.Album-title {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  /* line-height: 2.23vw; */
+  letter-spacing: 10px;
+  color: #000;
+  /* line-height: 2.23vw; */
+  /* font-size: 1.6vw; */
+}
+
+.Section-title {
+  margin: 10px;
+  /* font-weight: 700; */
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  color: #000;
+  /* line-height: 2.23vw; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  /* width: 35vw; */
+  /* text-align: right; */
+  letter-spacing: 2px;
+  font-size: 23px;
+}
+
+@media only screen and (max-width: 740px) {
+  .Album-section-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Album-description-section {
+    width: 60%;
+    min-width: 400px;
+  }
+  .Album-holder {
+    width: 60%;
+    min-width: 400px;
+  }
 }

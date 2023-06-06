@@ -1,0 +1,47 @@
+.Album-container {
+  /* background-color: red; */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  /* overflow: visible; */
+  /* height: 400px; */
+  /* margin: "20px"; */
+  display: inline-block;
+  aspect-ratio: 550/400;
+  /* padding: 20px; */
+}
+
+.Album {
+  /* background-color: pink; */
+  width: auto;
+  /* height: 100%; */
+  height: 100%;
+  position: relative;
+  transition: 550ms;
+  /* opacity: 0.5; */
+  top: 0;
+  aspect-ratio: 1/1;
+}
+.Album:hover {
+  aspect-ratio: 550/400;
+  cursor: pointer;
+  top: -5px;
+}
+
+.Cover {
+  border-radius: 2.5px;
+  height: 100%;
+  position: absolute;
+  float: left;
+  left: 0;
+}
+.Vinyl {
+  /* position: relative; */
+  height: 100%;
+  float: right;
+}
