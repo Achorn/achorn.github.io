@@ -11,7 +11,7 @@ import { ReactComponent as KeyboardSvg } from "../../assets/keyboard-icon.svg";
 import codingImg from "../../assets/img/red-blue-coding.JPG";
 import NavBar from "../main/nav/Navbar";
 import UnderConstruction from "../../components/display/under-construction/Under-construction";
-
+import SectionDivider from "../../components/display/section-divider/SectionDivider";
 const Coding = () => {
   const handleClick = (id) => {
     // handle selection change //visible change to selected button
@@ -164,14 +164,6 @@ function Projects() {
           <UnderConstruction />
         </div>
       </div>
-    </div>
-  );
-}
-
-function SectionDivider() {
-  return (
-    <div style={{ marginTop: "30px", marginBottom: "40px" }}>
-      <hr style={{ width: "65vw" }} />
     </div>
   );
 }
