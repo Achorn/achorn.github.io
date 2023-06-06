@@ -1,10 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0bab9a6.css",
-    "main.js": "/static/js/main.967fd563.js",
+    "main.css": "/static/css/main.fc09f74f.css",
+    "main.js": "/static/js/main.dcae770e.js",
     "static/js/787.c9df9596.chunk.js": "/static/js/787.c9df9596.chunk.js",
     "static/media/red-blue-coding.JPG": "/static/media/red-blue-coding.1268a11fd52e5ce4ff1e.JPG",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
+    "static/media/vinyl.png": "/static/media/vinyl.996abfd1e567c985a676.png",
+    "static/media/fallingDown.png": "/static/media/fallingDown.19e1e3c7b8f97d4567db.png",
+    "static/media/josh-with-guitar.jpg": "/static/media/josh-with-guitar.ae46125e4f478a438056.jpg",
+    "static/media/top.jpeg": "/static/media/top.17cdeddcfc5143744dd2.jpeg",
+    "static/media/redVinyl.png": "/static/media/redVinyl.b6a5cf910e9b26a3b1fd.png",
+    "static/media/tourguide.jpg": "/static/media/tourguide.0dec1a1c5a2bdd33ce97.jpg",
     "static/media/cu-boulder.png": "/static/media/cu-boulder.6017f7e409ea3e92c762.png",
     "static/media/myadcenter.jpg": "/static/media/myadcenter.8945d3baff823e1510f2.jpg",
     "static/media/clean-code-cover.jpg": "/static/media/clean-code-cover.471473b762443f6030f7.jpg",
@@ -15,12 +21,12 @@
     "static/media/flower-icon.svg": "/static/media/flower-icon.95df13627a46a49ea8e7ddfc22e0b764.svg",
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
-    "main.c0bab9a6.css.map": "/static/css/main.c0bab9a6.css.map",
-    "main.967fd563.js.map": "/static/js/main.967fd563.js.map",
+    "main.fc09f74f.css.map": "/static/css/main.fc09f74f.css.map",
+    "main.dcae770e.js.map": "/static/js/main.dcae770e.js.map",
     "787.c9df9596.chunk.js.map": "/static/js/787.c9df9596.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0bab9a6.css",
-    "static/js/main.967fd563.js"
+    "static/css/main.fc09f74f.css",
+    "static/js/main.dcae770e.js"
   ]
 }
