@@ -10,30 +10,25 @@ export default function SideNav() {
     setopen(!open);
   };
 
-  const NavigationMenu = () => {
-    if (open) {
-      return (
-        <div className="Nav-menu">
-          <FiArrowLeft className="Close-menu=btn" onClick={toggleOpen} />
-          {navData.map((item) => {
-            return (
-              <div key={item.id} className="Nav-item">
-                <Link to={`${item.link}`}>{item.text}</Link>
-              </div>
-            );
-          })}
-        </div>
-      );
-    }
-    return <div />;
-  };
-
   return (
     <div>
       <div className="Side-nav-button-container">
-        <FiMenu className="Menu-btn" onClick={toggleOpen} />
+        <FiMenu size="25px" className="Menu-btn" onClick={toggleOpen} />
       </div>
-      <NavigationMenu />
+      <div className={open ? "Nav-menu" : "Nav-menu-closed"}>
+        <FiArrowLeft
+          size="25px"
+          className="Close-menu=btn"
+          onClick={toggleOpen}
+        />
+        {navData.map((item) => {
+          return (
+            <div key={item.id} className="Nav-item">
+              <Link to={`${item.link}`}>{item.text}</Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
