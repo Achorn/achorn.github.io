@@ -13,18 +13,18 @@ export default function SideNav() {
   return (
     <div>
       <div className="Side-nav-button-container">
-        <FiMenu size="25px" className="Menu-btn" onClick={toggleOpen} />
+        <FiMenu size="23px" className="Menu-btn" onClick={toggleOpen} />
       </div>
       <div className={open ? "Nav-menu" : "Nav-menu-closed"}>
         <FiArrowLeft
-          size="25px"
+          size="23px"
           className="Close-menu=btn"
           onClick={toggleOpen}
         />
         {navData.map((item) => {
           return (
             <div key={item.id} className="Nav-item">
-              <Link to={`${item.link}`}>{item.text}</Link>
+              <Link to={`${item.link}`}>{item.text.toUpperCase()}</Link>
             </div>
           );
         })}
