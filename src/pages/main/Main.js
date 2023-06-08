@@ -3,8 +3,8 @@ import HeroSection from "./hero/Hero";
 import Navbar from "./nav/Navbar";
 import Footer from "./../../components/display/footer/Footer";
 import Topic from "./topic/Topic";
+import SideNav from "../../components/functional/side-nav-bar/SideNavBar";
 import { ReactComponent as AcornMedleySvg } from "../../assets/acorn-medley.svg";
-
 import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
 import { ReactComponent as GuitarIcon } from "../../assets/guitar-icon.svg";
 import { ReactComponent as KeyboardIcon } from "../../assets/keyboard-icon.svg";
@@ -32,6 +32,7 @@ function Main() {
   } else {
     return (
       <header className="Main-header">
+        <SideNav />
         <HeroSection
           image={
             "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2F000005860002.jpg?alt=media&token=b04cf4ea-6d00-4c81-8349-b15c40d8ae6d"

@@ -12,6 +12,7 @@ import codingImg from "../../assets/img/red-blue-coding.JPG";
 import NavBar from "../main/nav/Navbar";
 import UnderConstruction from "../../components/display/under-construction/Under-construction";
 import SectionDivider from "../../components/display/section-divider/SectionDivider";
+import SideNav from "../../components/functional/side-nav-bar/SideNavBar";
 const Coding = () => {
   const handleClick = (id) => {
     // handle selection change //visible change to selected button
@@ -26,6 +27,7 @@ const Coding = () => {
 
   return (
     <div className="Coding-page">
+      <SideNav />
       <HeroSection
         description={"coding"}
         image={codingImg}
