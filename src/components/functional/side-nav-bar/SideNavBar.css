@@ -1,0 +1,71 @@
+.Side-nav-button-container {
+  padding-left: 20px;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 11;
+  left: 0;
+  /* min-width: 100vw; */
+  height: 8vh;
+  /* border-style: solid; */
+  /* border-color: blue; */
+  position: fixed;
+  top: 0;
+
+  /* width: 35vw; */
+  text-transform: none;
+}
+.Menu-btm {
+  margin-left: 20px;
+}
+
+.Nav-menu {
+  /* border-right: solid lightgray; */
+  box-shadow: 0px 10px 20px #202e42;
+
+  transition: width 0.3s ease-in-out;
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 12;
+  width: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Nav-menu-closed {
+  transition: width 0.3s ease-in-out;
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  left: -300px;
+  z-index: 12;
+  width: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Close-menu-btn {
+  padding: 20px;
+  margin: 20px;
+}
+
+.Nav-item {
+  /* background-color: pink; */
+  text-align: left;
+  padding-top: 15px;
+  padding-left: 5px;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2.23vw;
+  letter-spacing: 6px;
+  color: #000;
+}

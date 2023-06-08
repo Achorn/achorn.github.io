@@ -41,6 +41,8 @@
   align-items: flex-start;
   width: 40%;
   height: 100%;
+  text-align: left;
+
   /* background-color: pink; */
 }
 
@@ -79,12 +81,19 @@
     flex-direction: column;
     justify-content: center;
   }
-  .Album-description-section {
-    width: 60%;
-    min-width: 400px;
-  }
+
   .Album-holder {
-    width: 60%;
-    min-width: 400px;
+    width: 80%;
+    max-width: 400px;
+    align-items: flex-start;
+  }
+  .Album-description-section {
+    width: 80%;
+    max-width: 400px;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 20px;
+    /* background-color: pink; */
+    /* min-width: 400px; */
   }
 }
