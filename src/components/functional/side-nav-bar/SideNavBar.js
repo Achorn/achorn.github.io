@@ -22,12 +22,14 @@ export default function SideNav() {
         />
       </div>
       <div className={open ? "Nav-menu" : "Nav-menu-closed"}>
-        <FiArrowLeft
-          size="23px"
-          className="Close-menu=btn"
-          onClick={toggleOpen}
-          color="var(--primary_color)"
-        />
+        <div className="Close-btn-container">
+          <FiArrowLeft
+            size="23px"
+            className="Close-menu=btn"
+            onClick={toggleOpen}
+            color="var(--primary_color)"
+          />
+        </div>
         {navData.map((item) => {
           return (
             <div key={item.id} className="Nav-item">
@@ -37,7 +39,10 @@ export default function SideNav() {
             </div>
           );
         })}
-        <DarkModeSlider />
+        <div className="DM-container">
+          <div className="Dm-title">DARK MODE</div>
+          <DarkModeSlider />
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,6 @@ function DarkModeSlider() {
   return (
     <div>
       <div>
-        Dark Mode
         <label class="switch">
           <input
             value={dark}

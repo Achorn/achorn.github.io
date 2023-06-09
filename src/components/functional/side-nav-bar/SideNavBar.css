@@ -1,4 +1,6 @@
 .Side-nav-button-container {
+  cursor: pointer;
+
   padding-left: 20px;
   /* background-color: pink; */
   display: flex;
@@ -25,22 +27,28 @@
   /* border-right: solid lightgray; */
   box-shadow: 0px 10px 20px black;
 
-  transition: width 0.3s ease-in-out;
+  /* transition: width 0.3s ease-in-out; */
   background-color: var(--bg_color);
   height: 100vh;
   position: fixed;
   left: 0;
   z-index: 12;
-  width: 180px;
+  width: 200px;
   padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
-
+/* .Nav-padding {
+margin: 20px;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+} */
 .Nav-menu-closed {
-  transition: width 0.3s ease-in-out;
-  background-color: white;
+  /* transition: width 0.3s ease-in-out; */
+  /* background-color: white; */
   height: 100vh;
   position: fixed;
   left: -300px;
@@ -51,16 +59,16 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-
-.Close-menu-btn {
-  padding: 20px;
-  margin: 20px;
+.Close-btn-container {
+  cursor: pointer;
+  width: min-content;
 }
 
 .Nav-item {
   /* background-color: pink; */
   text-align: left;
   padding-top: 15px;
+  padding-bottom: 10px;
   padding-left: 5px;
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -68,4 +76,19 @@
   line-height: 20px;
   letter-spacing: 6px;
   color: #000;
+}
+
+.DM-container {
+  flex-grow: 1;
+  width: 100%;
+  /* background-color: pink; */
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.Dm-title {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: var(--primary_color);
 }
