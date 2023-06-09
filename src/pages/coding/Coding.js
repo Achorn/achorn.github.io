@@ -74,7 +74,7 @@ function Skills() {
       <SectionDivider />
 
       <div className="Section-title">SKILLS</div>
-      <div>Flutter, Dart, React, JavaScript, Go, AWS</div>
+      <div className="Skills">Flutter, Dart, React, JavaScript, Go, AWS</div>
     </div>
   );
 }

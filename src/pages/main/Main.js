@@ -39,7 +39,12 @@ function Main() {
         id="music"
         child={
           <Topic
-            Icon={<GuitarIcon style={{ height: 90, width: "auto" }} />}
+            Icon={
+              <GuitarIcon
+                className="Topic-icon"
+                style={{ height: 90, width: "auto" }}
+              />
+            }
             image={
               "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2Fjosh-with-guitar.jpg?alt=media&token=5aaf468b-dac3-48be-bcc7-f12d79ac1dc2"
             }
@@ -54,7 +59,12 @@ function Main() {
         id="coding"
         child={
           <Topic
-            Icon={<KeyboardIcon style={{ height: 50, width: "auto" }} />}
+            Icon={
+              <KeyboardIcon
+                className="Topic-icon"
+                style={{ height: 50, width: "auto" }}
+              />
+            }
             title={"coding"}
             description={
               "The cross section between computer science and art. As someone who loves creating and problem solving, coding scratches both of these itches. I'm primarily a front end developer with some backend experience. I enjoy writing code that’s clean and readable while using the MVVM pattern to separate the business logic, models, and views."
@@ -66,7 +76,12 @@ function Main() {
         id="art"
         child={
           <Topic
-            Icon={<FlowerIcon style={{ height: 120, width: "auto" }} />}
+            Icon={
+              <FlowerIcon
+                className="Topic-icon"
+                style={{ height: 120, width: "auto" }}
+              />
+            }
             image={
               "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2FUntitled_Artwork.png?alt=media&token=84d6ae5f-e696-499d-8888-39cb8a0560b8"
             }

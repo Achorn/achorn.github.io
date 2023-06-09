@@ -1,6 +1,6 @@
 .Under-construction {
   border-style: solid;
-  border-color: black;
+  border-color: var(--primary_color);
   margin: 10px;
   padding: 10px;
   padding-right: 20px;
@@ -20,6 +20,7 @@
 }
 
 #under-construction-text {
+  color: var(--primary_color);
   user-select: none;
   /* border-style: solid; */
   /* border-color: blue; */
@@ -37,7 +38,7 @@
   height: 3vw;
   min-height: 40px;
   width: auto;
-  fill: black;
+  fill: var(--primary_color);
 }
 
 @media (prefers-reduced-motion: no-preference) {

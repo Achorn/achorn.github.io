@@ -24,7 +24,7 @@
   /* font-weight: 700; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  color: #000;
+  color: var(--primary_color);
   /* line-height: 2.23vw; */
   /* display: flex; */
   /* align-items: center; */
@@ -80,7 +80,7 @@
   font-size: 1.5vw;
   font-weight: 500;
   line-height: 40px;
-  color: #1f2425;
+  color: var(--primary_color);
 }
 
 .Job-history-container {
@@ -103,11 +103,13 @@
   align-items: center;
   justify-content: space-around;
   /* width: fit-content; */
-  background-color: white;
+  background-color: var(--bg-color);
   /* outline-style: solid; */
   /* outline-color: red; */
 }
-
+.Skills {
+  color: var(--primary_color);
+}
 .Job-image-container {
   margin: 4px;
   /* outline-style: solid; */
@@ -146,7 +148,7 @@
   /* font-weight: 700; */
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
-  color: #000;
+  color: var(--primary_color);
   /* line-height: 2.23vw; */
   /* display: flex; */
   /* align-items: center; */
@@ -163,7 +165,7 @@
   /* outline-style: solid; */
   /* outline-color: red; */
   font-family: "futura-pt", sans-serif;
-  color: #000;
+  color: var(--primary_color);
   /* line-height: 2.23vw; */
   /* display: flex; */
   /* align-items: center; */
@@ -175,6 +177,7 @@
 }
 .Date {
   margin: 4px;
+  color: var(--primary_color);
 }
 .Job-description {
   margin: 4px;
@@ -182,7 +185,7 @@
   font-family: "futura-pt", sans-serif;
   line-height: 25px;
   font-size: 14px;
-  color: #4b4848;
+  color: var(--primary_color);
   /* outline-style: solid; */
   /* outline-color: red; */
   align-items: flex-start;

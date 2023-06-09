@@ -20,7 +20,7 @@
 .vl {
   margin-left: 2vw;
   margin-right: 2vw;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--primary_color);
   height: 7vh;
 }
 
@@ -29,7 +29,7 @@
   /* border-color: blue; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  color: #000;
+  color: var(--primary_color);
   line-height: 2.23vw;
   display: flex;
   align-items: center;
@@ -43,7 +43,7 @@
   letter-spacing: 0.125vw;
   font-family: "caslon";
   font-size: 1.5vw;
-  color: #000;
+  color: var(--primary_color);
   font-style: italic;
   font-weight: 500;
   line-height: 18px;
@@ -68,9 +68,8 @@
   justify-content: center;
 }
 
-.Icon-svg {
+.Icon-svg g {
   height: 16vh;
   width: auto;
-  fill: #1f2425;
-  /* fill: black; */
+  fill: var(--primary_color);
 }

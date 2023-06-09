@@ -12,6 +12,21 @@
   /* width: 80vw; */
   /* font-size: calc(10px + 2vmin); */
 }
+.Music-section-title {
+  color: var(--primary_color);
+  margin: 10px;
+  /* font-weight: 700; */
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  /* line-height: 2.23vw; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  /* width: 35vw; */
+  /* text-align: right; */
+  letter-spacing: 2px;
+  font-size: 23px;
+}
 
 .Album-section {
   display: flex;
@@ -35,6 +50,7 @@
 }
 
 .Album-description-section {
+  color: var(--primary_color);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -55,7 +71,7 @@
   font-weight: 500;
   /* line-height: 2.23vw; */
   letter-spacing: 10px;
-  color: #000;
+  color: var(--primary_color);
   /* line-height: 2.23vw; */
   /* font-size: 1.6vw; */
 }
@@ -65,7 +81,7 @@
   /* font-weight: 700; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  color: #000;
+  color: var(--primary_color);
   /* line-height: 2.23vw; */
   /* display: flex; */
   /* align-items: center; */

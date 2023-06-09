@@ -12,6 +12,7 @@ hr {
 }
 .Footer-header {
   text-align: center;
+  color: var(--primary_color);
   margin-top: 40px;
   margin-bottom: 40px;
   line-height: 24px;
@@ -51,7 +52,7 @@ hr {
   color: #bbbbbb;
 }
 a {
-  color: #1f2425;
+  color: var(--primary_color);
   text-decoration: none;
 }
 
