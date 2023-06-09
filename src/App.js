@@ -1,7 +1,7 @@
 import "./App.css";
 import "./pages/main/Main";
 import ScrollToTop from "./ScrollToTop";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/main/Main";
 import Music from "./pages/music/Music";
 import Coding from "./pages/coding/Coding";
@@ -12,7 +12,7 @@ import Footer from "./components/display/footer/Footer";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <ScrollToTop />
         <SideNav />
         <Routes>
@@ -22,7 +22,7 @@ function App() {
           <Route path="/art" element={<Art />} />
         </Routes>
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }
