@@ -8,6 +8,7 @@ import Coding from "./pages/coding/Coding";
 import Art from "./pages/art/Art";
 import SideNav from "./components/functional/side-nav-bar/SideNavBar";
 import Footer from "./components/display/footer/Footer";
+
 function App() {
   return (
     <div className="App">

@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../components/display/footer/Footer";
 import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";

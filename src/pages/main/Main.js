@@ -1,7 +1,6 @@
 import "./Main.css";
 import HeroSection from "./hero/Hero";
 import Navbar from "./nav/Navbar";
-import Footer from "./../../components/display/footer/Footer";
 import Topic from "./topic/Topic";
 import { ReactComponent as AcornMedleySvg } from "../../assets/acorn-medley.svg";
 import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
