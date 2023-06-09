@@ -5,19 +5,16 @@ import musicImage from "../../assets/josh-with-guitar.jpg";
 import HeroSection from "../main/hero/Hero";
 import { ReactComponent as GuitarSvg } from "../../assets/guitar-icon.svg";
 import SectionDivider from "../../components/display/section-divider/SectionDivider";
-import SideNav from "../../components/functional/side-nav-bar/SideNavBar";
 
 const Music = () => {
   return (
     <div className="Music-page">
-      <SideNav />
       <HeroSection
         description={"music"}
         image={musicImage}
         bottomIcon={GuitarSvg}
       />
       <SectionDivider />
-
       <Albums />
     </div>
   );
