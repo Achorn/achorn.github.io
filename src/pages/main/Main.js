@@ -7,27 +7,15 @@ import { ReactComponent as FlowerIcon } from "../../assets/flower-icon.svg";
 import { ReactComponent as GuitarIcon } from "../../assets/guitar-icon.svg";
 import { ReactComponent as KeyboardIcon } from "../../assets/keyboard-icon.svg";
 
-import useFirestore from "../../hooks/useFirestore";
-
 function Main() {
-  // const { docs, isLoading } = useFirestore("images/main/children");
-  // console.log("docs: ", docs);
-  // console.log("isloading: ", isLoading);
-
   const handleClick = (id) => {
-    // handle selection change //visible change to selected button
     const element = document.getElementById(id);
     if (element) {
-      // setSelectedId(id);
       element.scrollIntoView({ behavior: "smooth" });
     }
-
     console.log("clicked");
   };
 
-  // if (isLoading) {
-  //   return <div>Loading ...</div>;
-  // } else {
   return (
     <header className="Main-header">
       <TopicSection
@@ -92,7 +80,6 @@ function Main() {
     </header>
   );
 }
-// }
 
 function TopicSection({ id, child }) {
   return (
