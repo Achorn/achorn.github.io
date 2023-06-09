@@ -29,7 +29,11 @@ export default function Topic({ image, title, description, Icon }) {
               style={{ opacity: 0 }}
             />
             {Icon}
-            <FiChevronRight color="#1f2425" size={40} className="Topic-arrow" />
+            <FiChevronRight
+              color="var(--primary_color)"
+              size={40}
+              className="Topic-arrow"
+            />
           </div>
         </Link>
       </div>

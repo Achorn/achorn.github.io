@@ -1,5 +1,4 @@
 .App {
   text-align: center;
-  /* border-style: solid;
-  border-color: red; */
+  background-color: var(--bg_color);
 }

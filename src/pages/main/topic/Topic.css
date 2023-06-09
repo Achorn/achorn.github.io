@@ -35,7 +35,7 @@
   font-weight: 500;
   line-height: 2.23vw;
   letter-spacing: 10px;
-  color: #000;
+  color: var(--primary_color);
   line-height: 2.23vw;
   font-size: 1.6vw;
 }
@@ -62,7 +62,7 @@
   font-size: 1.5vw;
   font-weight: 500;
   line-height: 40px;
-  color: #1f2425;
+  color: var(--primary_color);
 }
 
 .Learn-more-container {
@@ -74,7 +74,8 @@
   justify-content: center;
 }
 
-.Topic-icon {
+.Topic-icon g {
+  fill: var(--primary_color);
   /* border-style: solid;
   border-color: green; */
   height: 50px;
@@ -84,7 +85,7 @@
 .Topic-arrow {
   /* border-style: solid; */
   /* border-color: green; */
-  color: #1f2425;
+  color: var(--primary_color);
   size: 80;
 }
 .Description-container {

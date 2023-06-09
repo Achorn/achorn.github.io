@@ -24,7 +24,6 @@ function TitleWithLine({ description }) {
 function BottomIconContainer({ Icon }) {
   return (
     <div className="Bottom-icon-container">
-      {/* {icon} */}
       <Icon className="Icon-svg" />
     </div>
   );

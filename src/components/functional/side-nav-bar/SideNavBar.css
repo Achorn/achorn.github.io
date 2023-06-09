@@ -19,14 +19,15 @@
 }
 .Menu-btm {
   margin-left: 20px;
+  background-color: red;
 }
 
 .Nav-menu {
   /* border-right: solid lightgray; */
-  box-shadow: 0px 10px 20px #202e42;
+  box-shadow: 0px 10px 20px var(--primary_color);
 
   transition: width 0.3s ease-in-out;
-  background-color: white;
+  background-color: var(--bg_color);
   height: 100vh;
   position: fixed;
   left: 0;

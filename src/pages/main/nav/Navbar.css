@@ -2,7 +2,7 @@
   /* backdrop-filter: blur(10px); */
   /* background-color: pink; */
 
-  background-color: white;
+  background-color: var(--bg_color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +19,7 @@
   letter-spacing: 0.125vw;
   font-family: "caslon";
   /* font-size: 1.5vw; */
-  color: #000;
+  color: var(--primary_color);
   font-style: italic;
   font-weight: 500;
   line-height: 18px;
