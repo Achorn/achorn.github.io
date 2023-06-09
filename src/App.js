@@ -12,7 +12,6 @@ import Footer from "./components/display/footer/Footer";
 function App() {
   return (
     <div className="App">
-      {/* <HashRouter> */}
       <ScrollToTop />
       <SideNav />
       <Routes>
@@ -22,7 +21,6 @@ function App() {
         <Route path="/art" element={<Art />} />
       </Routes>
       <Footer />
-      {/* </HashRouter> */}
     </div>
   );
 }
