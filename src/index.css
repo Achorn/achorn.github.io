@@ -1,11 +1,11 @@
 :root {
   --bg_color: white;
-  --primary_color: black;
+  --primary_color: rgb(34, 34, 34);
   --link_color: navy;
 }
 
 [data-theme="dark"] {
-  --bg_color: #212732;
+  --bg_color: #292c32;
   --primary_color: #c5cfd8;
   --link_color: cyan;
 }
