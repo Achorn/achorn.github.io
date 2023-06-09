@@ -24,7 +24,7 @@
 
 .Album-section-container {
   /* background-color: orange; */
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   align-items: center;
