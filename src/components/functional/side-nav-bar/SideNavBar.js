@@ -24,7 +24,9 @@ export default function SideNav() {
         {navData.map((item) => {
           return (
             <div key={item.id} className="Nav-item">
-              <Link to={`${item.link}`}>{item.text.toUpperCase()}</Link>
+              <Link to={`${item.link}`} onClick={toggleOpen}>
+                {item.text.toUpperCase()}
+              </Link>
             </div>
           );
         })}
