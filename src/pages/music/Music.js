@@ -38,7 +38,7 @@ const Albums = () => {
   };
   return (
     <div>
-      <div className="Section-title">ALBUMS</div>
+      <div className="Music-section-title">ALBUMS</div>
       <div className="Album-section">
         <AlbumSection
           title="TOUR GUIDE"

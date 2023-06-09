@@ -5,11 +5,13 @@
 }
 
 [data-theme="dark"] {
-  --bg_color: orange;
-  --primary_color: pink;
+  --bg_color: #212732;
+  --primary_color: #e6edf3;
   --link_color: cyan;
 }
-
+* {
+  transition: all 0.3s ease-in-out;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
