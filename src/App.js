@@ -12,17 +12,17 @@ import Footer from "./components/display/footer/Footer";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <ScrollToTop />
-        <SideNav />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/coding" element={<Coding />} />
-          <Route path="/art" element={<Art />} />
-        </Routes>
-        <Footer />
-      </HashRouter>
+      {/* <HashRouter> */}
+      <ScrollToTop />
+      <SideNav />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/coding" element={<Coding />} />
+        <Route path="/art" element={<Art />} />
+      </Routes>
+      <Footer />
+      {/* </HashRouter> */}
     </div>
   );
 }
