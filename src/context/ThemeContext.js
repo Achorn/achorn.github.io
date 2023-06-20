@@ -4,6 +4,19 @@ export const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
+  const [dark, setDark] = useState(getInitialtheme);
+
+  function getInitialtheme() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.querySelector("body").setAttribute("data-theme", "dark");
+      return true;
+    }
+    document.querySelector("body").setAttribute("data-theme", "light");
+    return false;
+  }
   useEffect(() => {
     window
       .matchMedia("(prefers-color-scheme: dark)")
@@ -14,8 +27,6 @@ export const ThemeProvider = ({ children }) => {
         } else setDarkMode();
       });
   }, []);
-
-  const [dark, setDark] = useState(false);
 
   function toggleTheme(on) {
     if (on) {
