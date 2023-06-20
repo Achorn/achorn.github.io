@@ -1,19 +1,22 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  // const light = {
-  //   primary: "#e46a4b",
-  //   secondary: "#9a2305",
-  //   backGround: "#482e28 ",
-  // };
-  // const dark = {
-  //   primary: "#482e28 ",
-  //   secondary: "#9a2305",
-  //   backGround: "#e46a4b",
-  // };
+  useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        const colorScheme = event.matches ? "dark" : "light";
+        console.log(colorScheme); // "dark" or "light"
+        // setMode(colorScheme);
+        if (colorScheme === "light") {
+          setLightMode();
+        } else setDarkMode();
+      });
+  }, []);
+
   const [dark, setDark] = useState(false);
 
   function toggleTheme(on) {

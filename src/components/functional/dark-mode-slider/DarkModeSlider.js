@@ -3,6 +3,7 @@ import "./DarkModeSlider.css";
 
 function DarkModeSlider() {
   const { dark, toggleTheme } = useTheme();
+
   return (
     <div>
       <div>
@@ -11,7 +12,7 @@ function DarkModeSlider() {
             value={dark}
             type="checkbox"
             onChange={(e) => toggleTheme(e.target.checked)}
-          />{" "}
+          />
           <span class="slider round"></span>
         </label>
       </div>
