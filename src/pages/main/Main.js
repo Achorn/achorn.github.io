@@ -83,7 +83,7 @@ function Main() {
               />
             }
             image={
-              "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2FUntitled_Artwork.png?alt=media&token=84d6ae5f-e696-499d-8888-39cb8a0560b8"
+              "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2Fkinto-drawing.jpg?alt=media&token=1a05ab13-4219-4134-a05a-8d1adbadc284"
             }
             title={"art"}
             description={
