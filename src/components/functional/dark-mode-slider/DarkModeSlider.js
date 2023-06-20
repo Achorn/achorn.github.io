@@ -9,9 +9,9 @@ function DarkModeSlider() {
       <div>
         <label class="switch">
           <input
-            value={dark}
             type="checkbox"
             onChange={(e) => toggleTheme(e.target.checked)}
+            checked={dark}
           />
           <span class="slider round"></span>
         </label>

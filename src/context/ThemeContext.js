@@ -9,8 +9,6 @@ export const ThemeProvider = ({ children }) => {
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", (event) => {
         const colorScheme = event.matches ? "dark" : "light";
-        console.log(colorScheme); // "dark" or "light"
-        // setMode(colorScheme);
         if (colorScheme === "light") {
           setLightMode();
         } else setDarkMode();
@@ -25,19 +23,20 @@ export const ThemeProvider = ({ children }) => {
     } else {
       setLightMode();
     }
-    setDark(on);
   }
 
   function setDarkMode() {
     document.querySelector("body").setAttribute("data-theme", "dark");
+    setDark(true);
   }
 
   function setLightMode() {
     document.querySelector("body").setAttribute("data-theme", "light");
+    setDark(false);
   }
 
   return (
-    <ThemeContext.Provider value={{ theme: dark, toggleTheme }}>
+    <ThemeContext.Provider value={{ dark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
