@@ -1,6 +1,7 @@
 import React from "react";
 import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
+import acornBlogImg from "../../assets/img/acorn-blog.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
@@ -9,8 +10,8 @@ import HeroSection from "../main/hero/Hero";
 import { ReactComponent as KeyboardSvg } from "../../assets/keyboard-icon.svg";
 import codingImg from "../../assets/img/red-blue-coding.JPG";
 import NavBar from "../main/nav/Navbar";
-import UnderConstruction from "../../components/display/under-construction/Under-construction";
 import SectionDivider from "../../components/display/section-divider/SectionDivider";
+import ProjectCard from "./components/Project";
 
 const Coding = () => {
   const handleClick = (id) => {
@@ -159,8 +160,30 @@ function Projects() {
       <SectionDivider />
       <div>
         <div className="Section-title">PROJECTS</div>
-        <div style={{ padding: "40px", margin: "10px" }}>
-          <UnderConstruction />
+        <div className="Project-container">
+          <ProjectCard
+            img={acornBlogImg}
+            title={"Acorn Blog"}
+            description={"A blog about acorns of course"}
+            alt="acorn blog"
+            link={"https://joshuaachorn.com/acorn-blog"}
+          />
+          <ProjectCard
+            title={"This Website..."}
+            description={"A blog about acorns of course"}
+            alt="my website"
+            img={
+              "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2F000005860002.jpg?alt=media&token=b04cf4ea-6d00-4c81-8349-b15c40d8ae6d"
+            }
+            link={"https://joshuaachorn.com/"}
+          />
+          <ProjectCard
+            img={
+              "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2Fkinto-drawing.jpg?alt=media&token=1a05ab13-4219-4134-a05a-8d1adbadc284"
+            }
+            title={"Acorn Blog"}
+            description={"A blog about acorns of course"}
+          />
         </div>
       </div>
     </div>
