@@ -166,7 +166,7 @@ function Projects() {
             title={"Acorn Blog"}
             description={"A blog about acorns of course"}
             alt="acorn blog"
-            link={"https://joshuaachorn.com/acorn-blog"}
+            link={"https://github.com/Achorn/acorn-blog/blob/main/README.md"}
           />
           <ProjectCard
             title={"This Website..."}
