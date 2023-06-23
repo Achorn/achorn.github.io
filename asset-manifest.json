@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ed1c741a.css",
-    "main.js": "/static/js/main.f6e3d74b.js",
+    "main.css": "/static/css/main.cca800ec.css",
+    "main.js": "/static/js/main.4759b828.js",
     "static/js/787.c9df9596.chunk.js": "/static/js/787.c9df9596.chunk.js",
     "static/media/red-blue-coding.JPG": "/static/media/red-blue-coding.1268a11fd52e5ce4ff1e.JPG",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
@@ -13,6 +13,7 @@
     "static/media/tourguide.jpg": "/static/media/tourguide.0dec1a1c5a2bdd33ce97.jpg",
     "static/media/cu-boulder.png": "/static/media/cu-boulder.6017f7e409ea3e92c762.png",
     "static/media/myadcenter.jpg": "/static/media/myadcenter.8945d3baff823e1510f2.jpg",
+    "static/media/acorn-blog.png": "/static/media/acorn-blog.171a2ea5546b8521ea5f.png",
     "static/media/clean-code-cover.jpg": "/static/media/clean-code-cover.471473b762443f6030f7.jpg",
     "static/media/aircover.png": "/static/media/aircover.13103118b8bb79aecc08.png",
     "static/media/acorn-medley.svg": "/static/media/acorn-medley.680ad2287dae111095a76619c482f98f.svg",
@@ -21,12 +22,12 @@
     "static/media/flower-icon.svg": "/static/media/flower-icon.95df13627a46a49ea8e7ddfc22e0b764.svg",
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
-    "main.ed1c741a.css.map": "/static/css/main.ed1c741a.css.map",
-    "main.f6e3d74b.js.map": "/static/js/main.f6e3d74b.js.map",
+    "main.cca800ec.css.map": "/static/css/main.cca800ec.css.map",
+    "main.4759b828.js.map": "/static/js/main.4759b828.js.map",
     "787.c9df9596.chunk.js.map": "/static/js/787.c9df9596.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed1c741a.css",
-    "static/js/main.f6e3d74b.js"
+    "static/css/main.cca800ec.css",
+    "static/js/main.4759b828.js"
   ]
 }
