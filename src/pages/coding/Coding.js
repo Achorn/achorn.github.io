@@ -164,26 +164,30 @@ function Projects() {
           <ProjectCard
             img={acornBlogImg}
             title={"Acorn Blog"}
-            description={"A blog about acorns of course"}
+            description={
+              "An app where users can write their private journal entries, or post them in public"
+            }
             alt="acorn blog"
             link={"https://github.com/Achorn/acorn-blog/blob/main/README.md"}
           />
           <ProjectCard
             title={"This Website..."}
-            description={"A blog about acorns of course"}
+            description={
+              "My portfolio with simple styling that tells you more about who I am, and what my interests are"
+            }
             alt="my website"
             img={
               "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2F000005860002.jpg?alt=media&token=b04cf4ea-6d00-4c81-8349-b15c40d8ae6d"
             }
             link={"https://joshuaachorn.com/"}
           />
-          <ProjectCard
+          {/* <ProjectCard
             img={
               "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2Fkinto-drawing.jpg?alt=media&token=1a05ab13-4219-4134-a05a-8d1adbadc284"
             }
             title={"Acorn Blog"}
             description={"A blog about acorns of course"}
-          />
+          /> */}
         </div>
       </div>
     </div>
