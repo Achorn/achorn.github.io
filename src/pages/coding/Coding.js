@@ -2,7 +2,7 @@ import React from "react";
 import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
 import acornBlogImg from "../../assets/img/acorn-blog.png";
-import asciiImg from "../../assets/img/ascii-art.png";
+import asciiImg from "../../assets/img/ascii-art-16.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
