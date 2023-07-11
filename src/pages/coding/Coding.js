@@ -2,6 +2,7 @@ import React from "react";
 import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
 import acornBlogImg from "../../assets/img/acorn-blog.png";
+import asciiImg from "../../assets/img/ascii-art.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
@@ -169,6 +170,15 @@ function Projects() {
             }
             alt="acorn blog"
             link={"https://github.com/Achorn/acorn-blog/blob/main/README.md"}
+          />
+          <ProjectCard
+            img={asciiImg}
+            title={"ASCII Art Challenge"}
+            description={
+              "Take home project to test originality and how to handle scaling"
+            }
+            alt="ascii img"
+            link={"https://github.com/Achorn/ascii-art"}
           />
           <ProjectCard
             title={"This Website..."}
