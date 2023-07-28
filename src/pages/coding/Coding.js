@@ -3,6 +3,7 @@ import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
 import acornBlogImg from "../../assets/img/acorn-blog.png";
 import asciiImg from "../../assets/img/ascii-art-16.png";
+import carMap from "../../assets/img/car-map.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
@@ -170,6 +171,15 @@ function Projects() {
             }
             alt="acorn blog"
             link={"https://github.com/Achorn/acorn-blog/blob/main/README.md"}
+          />
+          <ProjectCard
+            img={carMap}
+            title={"Car/Truck Ownership Map"}
+            description={
+              "An interactive map to show the shift from majority car ownership to trucks by state"
+            }
+            alt="vehicle map"
+            link={"https://joshuaachorn.com/map-tester/"}
           />
           <ProjectCard
             img={asciiImg}
