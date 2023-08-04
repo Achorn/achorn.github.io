@@ -2,7 +2,9 @@ import React from "react";
 import "./Coding.css";
 import aircoverImg from "../../assets/img/aircover.png";
 import acornBlogImg from "../../assets/img/acorn-blog.png";
+import sfNeighborhoodImg from "../../assets/img/sf-guessing-image.png";
 import asciiImg from "../../assets/img/ascii-art-16.png";
+import carMap from "../../assets/img/car-map.png";
 import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
@@ -34,12 +36,12 @@ const Coding = () => {
         bottomIcon={KeyboardSvg}
       />
       <NavBar
-        navList={["inspiration", "skills", "job history", "projects"]}
+        navList={["inspiration", "skills", "experience", "projects"]}
         handleClick={(value) => handleClick(value)}
       />
       <Inspo />
       <Skills id="skills" />
-      <JobHistory id="job history" />
+      <JobHistory id="experience" />
       <Projects />
     </div>
   );
@@ -83,9 +85,9 @@ function Skills() {
 
 function JobHistory() {
   return (
-    <div className="Section-container" id="job history">
+    <div className="Section-container" id="experience">
       <SectionDivider />
-      <div className="Section-title">JOB HISTORY</div>
+      <div className="Section-title">EXPERIENCE</div>
       <JobComponent
         date={"Sep 2021 - May 2023 · 1 yr 9 mos"}
         className="Job-component"
@@ -163,6 +165,15 @@ function Projects() {
         <div className="Section-title">PROJECTS</div>
         <div className="Project-container">
           <ProjectCard
+            img={sfNeighborhoodImg}
+            title={"SF Neighborhood Quiz"}
+            description={
+              "Challenge your knowledge of SF neighborhoods with this guessing game"
+            }
+            alt="SF neighborhood guesser"
+            link={"https://joshuaachorn.com/sf-geography-quiz/"}
+          />
+          <ProjectCard
             img={acornBlogImg}
             title={"Acorn Blog"}
             description={
@@ -170,6 +181,15 @@ function Projects() {
             }
             alt="acorn blog"
             link={"https://github.com/Achorn/acorn-blog/blob/main/README.md"}
+          />
+          <ProjectCard
+            img={carMap}
+            title={"Car/Truck Ownership Map"}
+            description={
+              "An interactive map to show the shift from majority car ownership to trucks by state"
+            }
+            alt="vehicle map"
+            link={"https://joshuaachorn.com/map-tester/"}
           />
           <ProjectCard
             img={asciiImg}
@@ -191,13 +211,6 @@ function Projects() {
             }
             link={"https://joshuaachorn.com/"}
           />
-          {/* <ProjectCard
-            img={
-              "https://firebasestorage.googleapis.com/v0/b/personal-website-71391.appspot.com/o/images%2Fkinto-drawing.jpg?alt=media&token=1a05ab13-4219-4134-a05a-8d1adbadc284"
-            }
-            title={"Acorn Blog"}
-            description={"A blog about acorns of course"}
-          /> */}
         </div>
       </div>
     </div>
