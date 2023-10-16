@@ -27,6 +27,12 @@
   aspect-ratio: 1/1;
 }
 .Album:hover {
+  aspect-ratio: 570/400;
+  cursor: pointer;
+  top: -10px;
+}
+
+.show {
   aspect-ratio: 550/400;
   cursor: pointer;
   top: -5px;
