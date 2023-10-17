@@ -28,7 +28,6 @@
 }
 .Album:hover {
   transition: 450ms;
-
   aspect-ratio: 570/400;
   cursor: pointer;
   top: -10px;
