@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Album.css";
-
+import { useRef } from "react";
 // class Album extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -46,10 +46,26 @@ import "./Album.css";
 // }
 
 const Album = ({ cover, vinyl, link }) => {
+  const myRef = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        console.log(entry);
+        if (entry.intersectionRatio !== 1) {
+          entry.target.classList.remove("show");
+        } else {
+          entry.target.classList.add("show");
+        }
+      },
+      { threshold: 1 }
+    );
+    observer.observe(myRef.current);
+  }, []);
   return (
     <div className="Album-container">
       <a href={link} target="_blank" rel="noreferrer">
-        <div className="Album">
+        <div ref={myRef} className="Album">
           <img className="Vinyl" src={vinyl} alt="Vinyl Cover" />
           <img
             className="Cover"
