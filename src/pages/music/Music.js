@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Music.css";
 import Album from "./components/Album";
 import musicImage from "../../assets/josh-with-guitar.jpg";
@@ -42,7 +42,7 @@ const Albums = () => {
       <div className="Album-section">
         <AlbumSection
           title="TOUR GUIDE"
-          date={2022}
+          date={"2022"}
           album={
             <Album
               vinyl={album1.vinyl}
@@ -82,10 +82,20 @@ const Albums = () => {
   );
 };
 const AlbumSection = ({ album, title, date }) => {
+  const descriptionRef = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+    observer.observe(descriptionRef.current);
+  }, []);
   return (
     <div className="Album-section-container">
       <div className="Album-holder">{album}</div>
-      <div className="Album-description-section">
+      <div ref={descriptionRef} className="Album-description-section hidden">
         <div className="Album-title">{title}</div>
         <div className="Album-date">{date}</div>
       </div>

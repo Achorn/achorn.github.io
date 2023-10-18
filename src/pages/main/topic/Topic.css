@@ -66,12 +66,17 @@
 }
 
 .Learn-more-container {
+  transition: all 0.3s;
+
   /* border-style: solid; */
   /* border-color: green; */
   display: flex;
   flex-direction: Row;
   align-items: center;
   justify-content: center;
+}
+.Learn-more-container:hover {
+  transform: translate(0px, -5px);
 }
 
 .Topic-icon g {
