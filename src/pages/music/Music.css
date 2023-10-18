@@ -94,7 +94,7 @@
 
 .hidden {
   opacity: 0%;
-  transform: translate(0, 50px) rotate(2deg);
+  transform: translate(0, 100px);
   filter: blur(0px);
   transition: all 0.8s;
 }
