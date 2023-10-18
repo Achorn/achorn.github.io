@@ -5,9 +5,7 @@ import { NavLink as Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 export default function Topic({ image, title, description, Icon }) {
-  const titleRef = useRef();
   const descriptionRef = useRef();
-  const buttonRef = useRef();
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -15,9 +13,7 @@ export default function Topic({ image, title, description, Icon }) {
         entry.target.classList.add("show");
       }
     });
-    observer.observe(titleRef.current);
     observer.observe(descriptionRef.current);
-    observer.observe(buttonRef.current);
   }, []);
   return (
     <div className="Topic-container">
@@ -29,16 +25,14 @@ export default function Topic({ image, title, description, Icon }) {
           loading="lazy"
         />
       </div>
-      <div className="Topic-words-container">
-        <h2 ref={titleRef} className="Topic-title hidden">
-          {title.toUpperCase()}
-        </h2>
+      <div ref={descriptionRef} className="Topic-words-container hidden">
+        <h2 className="Topic-title ">{title.toUpperCase()}</h2>
 
-        <div ref={descriptionRef} className="Description-container hidden">
-          <h3 className="Topic-description">{description}</h3>
+        <div className="Description-container ">
+          <h3 className="Topic-description ">{description}</h3>
         </div>
         <Link to={`/${title}`}>
-          <div ref={buttonRef} className="Learn-more-container hidden">
+          <div className="Learn-more-container ">
             <FiChevronRight
               color="#1f2425"
               size={40}

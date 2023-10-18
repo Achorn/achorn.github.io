@@ -38,7 +38,6 @@
   color: var(--primary_color);
   line-height: 2.23vw;
   font-size: 1.6vw;
-  transition-delay: 80ms;
 }
 .Uc-container {
   width: auto;
@@ -64,17 +63,20 @@
   font-weight: 500;
   line-height: 40px;
   color: var(--primary_color);
-  transition-delay: 160ms;
 }
 
 .Learn-more-container {
+  transition: all 0.3s;
+
   /* border-style: solid; */
   /* border-color: green; */
   display: flex;
   flex-direction: Row;
   align-items: center;
   justify-content: center;
-  transition-delay: 240ms;
+}
+.Learn-more-container:hover {
+  transform: translate(0px, -5px);
 }
 
 .Topic-icon g {
