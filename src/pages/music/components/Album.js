@@ -53,9 +53,9 @@ const Album = ({ cover, vinyl, link }) => {
         const entry = entries[0];
         console.log(entry);
         if (entry.intersectionRatio !== 1) {
-          entry.target.classList.remove("show");
+          entry.target.classList.remove("openAlbum");
         } else {
-          entry.target.classList.add("show");
+          entry.target.classList.add("openAlbum");
         }
       },
       { threshold: 1 }

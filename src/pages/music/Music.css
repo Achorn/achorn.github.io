@@ -92,6 +92,19 @@
   font-size: 23px;
 }
 
+.hidden {
+  opacity: 0%;
+  transform: translate(0, 50px) rotate(2deg);
+  filter: blur(0px);
+  transition: all 0.8s;
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg);
+  filter: blur(0);
+}
+
 @media only screen and (max-width: 740px) {
   .Album-section-container {
     flex-direction: column;
