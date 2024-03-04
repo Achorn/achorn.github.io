@@ -9,17 +9,20 @@ import Art from "./pages/art/Art";
 import SideNav from "./components/functional/side-nav-bar/SideNavBar";
 import Footer from "./components/display/footer/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
+import Home from "./pages/home/Home";
 function App() {
   return (
     <ThemeProvider>
       <div className="App">
         <ScrollToTop />
-        <SideNav />
+        {/* <SideNav /> */}
         <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/coding" element={<Coding />} />
-          <Route path="/art" element={<Art />} />
+          {/* <Route exact path="/" element={<Main />} /> */}
+
+          <Route exact path="/" element={<Home />} />
+          {/* <Route path="/music" element={<Music />} /> */}
+          {/* <Route path="/coding" element={<Coding />} /> */}
+          {/* <Route path="/art" element={<Art />} /> */}
         </Routes>
         <Footer />
       </div>
