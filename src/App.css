@@ -1,5 +1,7 @@
 .App {
   text-align: center;
   background-color: var(--bg_color);
-  max-width: 1920px;
+  max-width: 1020px;
+  margin: auto;
+  /* width: 100%; */
 }
