@@ -1,10 +1,19 @@
 import React from "react";
+import FlexBetween from "../../components/FlexBetween";
 
 const Home = () => {
   return (
     <div>
       {/* Nav section */}
-      <div>NAV</div>
+      <FlexBetween>
+        <div>Joshua Achorn</div>
+        <FlexBetween gap={"10px"}>
+          <div>About</div>
+          <div>Projects</div>
+          {/* <div>Blog</div> */}
+          <div>Contact</div>
+        </FlexBetween>
+      </FlexBetween>
 
       {/* hero section */}
       <div>HERO</div>
