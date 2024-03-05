@@ -1,6 +1,16 @@
 import React from "react";
 import FlexBetween from "../../components/FlexBetween";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
 
 const Home = () => {
   return (
@@ -32,8 +42,33 @@ const Home = () => {
             View Github
           </Button>
         </Grid>
-        <Grid item xs={12} md={4} lg={4} order={{ xs: 1, md: 2 }}>
-          Photo
+        <Grid
+          item
+          xs={12}
+          md={4}
+          lg={4}
+          order={{ xs: 1, md: 2 }}
+          justifyContent={"right"}
+          alignItems={"center"}
+        >
+          <Box display="flex" justifyContent="flex-end">
+            <Card
+              sx={{
+                width: { sm: "100%", md: "80%" },
+                height: 350,
+                borderRadius: 6,
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="100%"
+                // image="/selfie.jpg"
+                image={require("../../assets/selfie.jpg")} // require image
+                // image="/static/images/cards/contemplative-reptile.jpg"
+                alt="green iguana"
+              />
+            </Card>
+          </Box>
         </Grid>
       </Grid>
 
