@@ -31,12 +31,25 @@ const Home = () => {
       <Box sx={{ mt: "50px" }} />
       <Grid container spacing={2}>
         <Grid item order={{ xs: 2, md: 1 }} xs={12} md={8} lg={8} align="left">
-          <Typography variant="h4" align="left" sx={{ mb: "10px" }}>
+          <Typography
+            variant="h4"
+            align="left"
+            fontWeight={500}
+            sx={{ mb: "20px", fontWeight: 500 }}
+          >
             Hello! I'm Joshua, a full stack developer based in SF.
           </Typography>
-          <Typography align="left" sx={{ mb: "10px" }}>
-            I've had 3 years of working at startups as a founding team member.
+          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
+            I've had 3 years of working
           </Typography>
+          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna
+          </Typography>
+          <Typography variant="body1" align="left" sx={{ mb: "30px" }}>
+            nisi ut culpa qui officia deserunt mollit anim id est laborum."
+          </Typography>
+
           <Button variant="contained">View Linkedin</Button>
           <Button variant="outlined" sx={{ ml: "10px" }}>
             View Github
@@ -54,18 +67,16 @@ const Home = () => {
           <Box display="flex" justifyContent="flex-end">
             <Card
               sx={{
-                width: { sm: "100%", md: "80%" },
+                width: { sm: "100%", md: "85%" },
                 height: 350,
-                borderRadius: 6,
+                borderRadius: { sm: 1, md: 4 },
               }}
             >
               <CardMedia
                 component="img"
                 height="100%"
-                // image="/selfie.jpg"
                 image={require("../../assets/selfie.jpg")} // require image
-                // image="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
+                alt="profile photo"
               />
             </Card>
           </Box>
