@@ -49,7 +49,7 @@
   display: flex;
 
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-around;
   /* width: fit-content; */
   background-color: var(--bg-color);
@@ -60,11 +60,11 @@
   color: var(--primary_color);
 }
 .Job-image-container {
-  margin: 4px;
+  margin: 40px;
   /* outline-style: solid; */
   /* outline-color: red; */
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
 }
 .Job-image {
   width: fit-content;
@@ -156,7 +156,7 @@
   }
   .Job-title-description {
     align-items: center;
-    width: 80vw;
+    width: 90vw;
   }
   .Job-description {
     text-align: center;

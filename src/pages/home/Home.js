@@ -130,6 +130,8 @@ const Home = () => {
 
       {/* <div>CONTACT</div> */}
       <Experience id="experience" />
+
+      <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
     </>
   );
 };

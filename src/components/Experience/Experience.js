@@ -75,7 +75,7 @@ function JobComponent({ date, image, company, title, description }) {
                 gap: { xs: 1, sm: 2 },
               }}
             >
-              <Typography fontWeight={600}>{company.toUpperCase()}</Typography>
+              <Typography fontWeight={700}>{company.toUpperCase()}</Typography>
               <Typography sx={{ textAlign: "left" }}>{title}</Typography>
             </Grid>
             <Typography sx={{ textAlign: "left" }}> {date}</Typography>

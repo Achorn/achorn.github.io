@@ -20,8 +20,9 @@ const drawerWidth = 240;
 const navItems = [
   "About",
   "projects",
+  "experience",
   // "Blog",
-  "Contact",
+  // "Contact",
 ];
 
 const Nav = (props) => {
