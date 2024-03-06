@@ -1,4 +1,34 @@
-import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
+import profile from "../../assets/selfie.jpg";
+import sfImage from "../../assets/img/sf-guessing-image.png";
+import blogImage from "../../assets/img/acorn-blog.png";
+const projects = [
+  {
+    title: "SF Neighborhood Quiz",
+    techUsed: ["mongoDb", "Node", "Express", "Javascript"],
+    description:
+      "a fun and easy way to test your knowledge of the greatest city in the US",
+    image: sfImage,
+    githubLink: "",
+    learnMoreLink: "",
+  },
+  {
+    title: "Acorn Blog",
+    techUsed: ["mongoDb", "Node", "Express", "React"],
+    description: "for sharing your photography with a like-minded community",
+    image: blogImage,
+    githubLink: "",
+    learnMoreLink: "",
+  },
+];
 
 const Home = () => {
   return (
@@ -51,7 +81,7 @@ const Home = () => {
               <CardMedia
                 component="img"
                 height="100%"
-                image={require("../../assets/selfie.jpg")}
+                image={profile}
                 alt="profile photo"
               />
             </Card>
@@ -61,6 +91,83 @@ const Home = () => {
 
       {/* About section */}
       {/* <div>ABOUT</div> */}
+      <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
+
+      <Typography
+        variant="h4"
+        fontWeight="500"
+        textAlign={"left"}
+        sx={{ mb: 5 }}
+      >
+        Selected Projects
+      </Typography>
+
+      {projects.map((project) => (
+        <Box sx={{ mb: 5 }}>
+          <Grid container spacing={4}>
+            <Grid
+              container
+              item
+              xs="12"
+              sm="6"
+              gap={2}
+              // justifyContent={"start"}
+              // alignItems={"start"}
+              alignContent={"start"}
+            >
+              <Typography variant="h5" textAlign={"left"}>
+                {project.title}
+              </Typography>
+
+              <Grid container spacing={0} gap={1}>
+                {project.techUsed.map((tech) => (
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    sx={{ textTransform: "none" }}
+                    size="small"
+                  >
+                    {tech}
+                  </Button>
+                ))}
+              </Grid>
+              <Typography textAlign={"left"}>{project.description}</Typography>
+              <Button size="small" variant="contained">
+                live example
+              </Button>
+
+              <Button size="small" variant="outlined">
+                live example
+              </Button>
+            </Grid>
+            <Grid item xs="12" sm="6">
+              {/* <Box display="flex" justifyContent="flex-end"> */}
+              <Card
+                sx={{
+                  width: "100%",
+                  height: 350,
+                  borderRadius: { sm: 1, md: 4 },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="100%"
+                  image={project.image}
+                  sx={{ objectFit: "cover" }}
+                  alt="project image"
+                />
+              </Card>
+              {/* </Box> */}
+            </Grid>
+          </Grid>
+        </Box>
+      ))}
+      <Container>
+        {/* title  */}
+        {/* description */}
+        {/* linkes  */}
+        {/* image */}
+      </Container>
 
       {/* Project section */}
       {/* <div>PROJECTS</div> */}
