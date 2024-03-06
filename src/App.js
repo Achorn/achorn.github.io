@@ -7,21 +7,24 @@ import Footer from "./components/display/footer/Footer";
 import Home from "./pages/home/Home";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
+import Nav from "./components/Nav/Nav";
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         {/* <SideNav /> */}
-        <Routes>
-          {/* <Route exact path="/" element={<Main />} /> */}
+        <Nav>
+          <Routes>
+            {/* <Route exact path="/" element={<Main />} /> */}
 
-          <Route exact path="/" element={<Home />} />
-          {/* <Route path="/music" element={<Music />} /> */}
-          {/* <Route path="/coding" element={<Coding />} /> */}
-          {/* <Route path="/art" element={<Art />} /> */}
-        </Routes>
-        {/* <Footer /> */}
+            <Route exact path="/" element={<Home />} />
+            {/* <Route path="/music" element={<Music />} /> */}
+            {/* <Route path="/coding" element={<Coding />} /> */}
+            {/* <Route path="/art" element={<Art />} /> */}
+          </Routes>
+          {/* <Footer /> */}
+        </Nav>
       </div>
     </ThemeProvider>
   );
