@@ -19,41 +19,6 @@
   justify-content: center;
 }
 
-.Section-title {
-  margin: 10px;
-  /* font-weight: 700; */
-  font-family: "futura-pt", sans-serif;
-  font-weight: 500;
-  color: var(--primary_color);
-  /* line-height: 2.23vw; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: flex-end; */
-  /* width: 35vw; */
-  /* text-align: right; */
-  letter-spacing: 2px;
-  font-size: 23px;
-}
-
-.Inspo-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  /* outline-style: solid; */
-  /* outline-color: red; */
-  max-width: 1200px;
-  /* min-height: 100vh; */
-  width: 70vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.Inspo-image-container {
-  /* outline-style: solid; */
-  /* outline-color: black; */
-  height: 60vh;
-}
-
 .Project-container {
   /* background-color: pink; */
   display: flex;
@@ -65,34 +30,6 @@
   margin-bottom: 100px;
 
   flex-wrap: wrap;
-}
-.Inspo-image {
-  /* outline-style: solid; */
-  /* outline-color: black; */
-  width: fit-content;
-  height: fit-content;
-  width: 100%; /* or any custom size */
-  height: 100%;
-  object-fit: contain;
-}
-.Inspo-written-content {
-  /* outline-style: solid; */
-  /* outline-color: red; */
-  margin-top: 20px;
-  padding: 10px;
-  width: 60%;
-  height: auto;
-}
-.Inspo-description {
-  /* outline-style: solid; */
-  /* outline-color: red; */
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: "caslon";
-  font-size: 1.5vw;
-  font-weight: 500;
-  line-height: 40px;
-  color: var(--primary_color);
 }
 
 .Job-history-container {

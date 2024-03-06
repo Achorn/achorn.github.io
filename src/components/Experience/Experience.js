@@ -5,11 +5,10 @@ import myadcenterImg from "../../assets/img/myadcenter.jpg";
 import nighTechnologiesImg from "../../assets/img/nigh-technologies.png";
 import cuBoulderImg from "../../assets/img/cu-boulder.png";
 import aircoverImg from "../../assets/img/aircover.png";
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const Experience = () => {
   return (
-    // <div className="Section-container" id="experience">
     <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
       <JobComponent
         date={"Sep 2021 - May 2023 · 1 yr 9 mos"}
@@ -67,14 +66,18 @@ function JobComponent({ date, image, company, title, description }) {
           <img src={image} className="Job-image" alt="logo" />
         </div>
         <div className="Job-title-description">
-          <div className="Job-labels">
-            <Typography>{company.toUpperCase()}</Typography>
-            {/* <div className="Job-company">{company.toUpperCase()}</div> */}
+          <Grid
+            container
+            sx={{
+              textAlign: { xs: "center", sm: "left" },
+              flexDirection: { xs: "column", sm: "row" },
+              gap: { xs: 1, sm: 2 },
+            }}
+          >
+            <Typography fontWeight={600}>{company.toUpperCase()}</Typography>
             <Typography>{title}</Typography>
-            {/* <div className="Job-title">{title}</div> */}
-          </div>
+          </Grid>
           <Typography>{date}</Typography>
-          {/* <div className="Date">{date}</div> */}
           <Typography
             sx={{
               color: "text.secondary",
@@ -83,7 +86,6 @@ function JobComponent({ date, image, company, title, description }) {
           >
             {description}
           </Typography>
-          {/* <div className="Job-description">{description}</div> */}
         </div>
       </div>
     </div>
