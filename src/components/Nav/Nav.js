@@ -24,6 +24,13 @@ const navItems = [
   // "Blog",
   // "Contact",
 ];
+const handleClick = (id) => {
+  // const element = document.getElementById(id);
+  // if (element) {
+  //   element.scrollIntoView({ behavior: "smooth" });
+  // }
+  console.log("clicked");
+};
 
 const Nav = (props) => {
   const { window } = props;
@@ -43,7 +50,10 @@ const Nav = (props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => handleClick()}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -96,7 +106,11 @@ const Nav = (props) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "text.secondary" }}>
+              <Button
+                key={item}
+                sx={{ color: "text.secondary" }}
+                onClick={() => handleClick()}
+              >
                 {item}
               </Button>
             ))}

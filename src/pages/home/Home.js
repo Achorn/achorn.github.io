@@ -116,7 +116,7 @@ const Home = () => {
       </Typography>
 
       {projects.map((project) => (
-        <Project project={project} />
+        <Project key={project.title} project={project} />
       ))}
 
       <Typography

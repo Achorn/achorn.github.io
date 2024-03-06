@@ -8,8 +8,8 @@ const Project = ({ project }) => {
         <Grid
           container
           item
-          xs="12"
-          sm="6"
+          xs={12}
+          sm={6}
           gap={2}
           order={{ xs: 2, sm: 1 }}
           alignContent={"start"}
@@ -19,8 +19,12 @@ const Project = ({ project }) => {
           </Typography>
 
           <Grid container spacing={0} gap={1}>
-            {project.techUsed.map((tech) => (
-              <Button sx={{ textTransform: "none" }} size="small">
+            {project.techUsed.map((tech, i) => (
+              <Button
+                key={tech + i}
+                sx={{ textTransform: "none" }}
+                size="small"
+              >
                 {tech}
               </Button>
             ))}
@@ -38,7 +42,7 @@ const Project = ({ project }) => {
             </Button>
           )}
         </Grid>
-        <Grid item xs="12" sm="6" order={{ xs: 1, sm: 2 }}>
+        <Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
           <Card
             sx={{
               width: "100%",
