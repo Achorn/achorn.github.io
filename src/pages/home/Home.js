@@ -1,15 +1,8 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
 import profile from "../../assets/selfie.jpg";
 import sfImage from "../../assets/img/sf-guessing-image.png";
 import blogImage from "../../assets/img/acorn-blog.png";
+
 const projects = [
   {
     title: "SF Neighborhood Quiz",
@@ -121,27 +114,17 @@ const Home = () => {
 
               <Grid container spacing={0} gap={1}>
                 {project.techUsed.map((tech) => (
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    sx={{ textTransform: "none" }}
-                    size="small"
-                  >
+                  <Button sx={{ textTransform: "none" }} size="small">
                     {tech}
                   </Button>
                 ))}
               </Grid>
               <Typography textAlign={"left"}>{project.description}</Typography>
-              <Button size="small" variant="contained">
-                live example
-              </Button>
+              <Button variant="outlined">live example</Button>
 
-              <Button size="small" variant="outlined">
-                live example
-              </Button>
+              <Button variant="outlined">view github</Button>
             </Grid>
             <Grid item xs="12" sm="6">
-              {/* <Box display="flex" justifyContent="flex-end"> */}
               <Card
                 sx={{
                   width: "100%",
@@ -162,15 +145,6 @@ const Home = () => {
           </Grid>
         </Box>
       ))}
-      <Container>
-        {/* title  */}
-        {/* description */}
-        {/* linkes  */}
-        {/* image */}
-      </Container>
-
-      {/* Project section */}
-      {/* <div>PROJECTS</div> */}
 
       {/* <div>CONTACT</div> */}
     </>
