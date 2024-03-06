@@ -4,6 +4,7 @@ import sfImage from "../../assets/img/sf-guessing-image.png";
 import photoAppImage from "../../assets/img/projectImg/sociopedia.jpg";
 import toadImage from "../../assets/img/projectImg/toad.jpg";
 import Project from "../../components/project.js/Project";
+import Experience from "../../components/Experience/Experience";
 
 const projects = [
   {
@@ -118,7 +119,17 @@ const Home = () => {
         <Project project={project} />
       ))}
 
+      <Typography
+        variant="h4"
+        fontWeight="500"
+        textAlign={"left"}
+        sx={{ mb: 10 }}
+      >
+        Experience
+      </Typography>
+
       {/* <div>CONTACT</div> */}
+      <Experience id="experience" />
     </>
   );
 };
