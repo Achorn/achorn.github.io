@@ -104,6 +104,7 @@ const Home = () => {
               xs="12"
               sm="6"
               gap={2}
+              order={{ xs: 2, md: 1 }}
               // justifyContent={"start"}
               // alignItems={"start"}
               alignContent={"start"}
@@ -124,7 +125,7 @@ const Home = () => {
 
               <Button variant="outlined">view github</Button>
             </Grid>
-            <Grid item xs="12" sm="6">
+            <Grid item xs="12" sm="6" order={{ xs: 1, md: 2 }}>
               <Card
                 sx={{
                   width: "100%",
