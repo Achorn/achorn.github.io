@@ -18,17 +18,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
 const navItems = [
-  "About",
+  "about",
   "projects",
   "experience",
   // "Blog",
   // "Contact",
 ];
 const handleClick = (id) => {
-  // const element = document.getElementById(id);
-  // if (element) {
-  //   element.scrollIntoView({ behavior: "smooth" });
-  // }
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+
   console.log("clicked");
 };
 
@@ -52,7 +53,7 @@ const Nav = (props) => {
           <ListItem key={item} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => handleClick()}
+              onClick={() => handleClick(item)}
             >
               <ListItemText primary={item} />
             </ListItemButton>
@@ -109,7 +110,7 @@ const Nav = (props) => {
               <Button
                 key={item}
                 sx={{ color: "text.secondary" }}
-                onClick={() => handleClick()}
+                onClick={() => handleClick(item)}
               >
                 {item}
               </Button>

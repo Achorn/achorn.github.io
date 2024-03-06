@@ -37,8 +37,7 @@ const projects = [
 const Home = () => {
   return (
     <>
-      {/* hero section */}
-      <Box sx={{ mt: { xs: 0, md: "100px" } }} />
+      <Box id={"about"} sx={{ mt: { xs: 0, md: "100px" } }} />
       <Grid container spacing={2} sx={{ pl: "0px" }}>
         <Grid item order={{ xs: 2, md: 1 }} xs={12} md={8} lg={8} align="left">
           <Typography
@@ -104,7 +103,7 @@ const Home = () => {
         </Grid>
       </Grid>
 
-      <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
+      <Box id="projects" sx={{ mt: { xs: "50px", md: "120px" } }} />
 
       <Typography
         variant="h4"
@@ -127,9 +126,10 @@ const Home = () => {
       >
         Experience
       </Typography>
+      <Box id="experience" sx={{ mt: { xs: 0, md: "100px" } }} />
 
       {/* <div>CONTACT</div> */}
-      <Experience id="experience" />
+      <Experience />
 
       <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
     </>

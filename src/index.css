@@ -3,6 +3,9 @@
   --primary_color: rgb(34, 34, 34);
   --link_color: navy;
 }
+* {
+  scroll-margin-top: 100px;
+}
 
 [data-theme="dark"] {
   --bg_color: #292c32;
