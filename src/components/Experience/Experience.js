@@ -15,7 +15,7 @@ const Experience = () => {
         className="Job-component"
         image={aircoverImg}
         company={"Aircover"}
-        title={"Junior Software Engineer"}
+        title={"Full-Stack Engineer"}
         description={
           "Translate Figma designs into web pages with reusable maintainable components. Implemented MVVM design pattern on projects to separate the UI, models, and controllers. Wrote unit and integration tests alongside all new features and updates."
         }

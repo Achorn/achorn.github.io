@@ -48,17 +48,20 @@ const Home = () => {
           >
             Hello! I'm Joshua, a full-stack developer based in SF.
           </Typography>
-          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
-            I've had 3 years of working
-          </Typography>
-          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna
-          </Typography>
-          <Typography variant="body1" align="left" sx={{ mb: "30px" }}>
-            nisi ut culpa qui officia deserunt mollit anim id est laborum."
-          </Typography>
 
+          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
+            I'm a collaborative software engineer with 3 years of experience.
+          </Typography>
+          <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
+            As a founding member in early stage startups, I've worked closely
+            with CEOs to build apps from the ground up, flourishing in
+            autonomous environments with a keen eye for detail.
+          </Typography>
+          <Typography
+            variant="body1"
+            align="left"
+            sx={{ mb: "30px" }}
+          ></Typography>
           <Button
             variant="contained"
             target="_blank"
