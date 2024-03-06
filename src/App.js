@@ -2,25 +2,28 @@ import "./App.css";
 import "./pages/main/Main";
 import ScrollToTop from "./ScrollToTop";
 import { Routes, Route } from "react-router-dom";
-import Main from "./pages/main/Main";
-import Music from "./pages/music/Music";
-import Coding from "./pages/coding/Coding";
-import Art from "./pages/art/Art";
-import SideNav from "./components/functional/side-nav-bar/SideNavBar";
 import Footer from "./components/display/footer/Footer";
-import { ThemeProvider } from "./context/ThemeContext";
+// import { ThemeProvider } from "./context/ThemeContext";
+import Home from "./pages/home/Home";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
+import Nav from "./components/Nav/Nav";
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme}>
       <div className="App">
-        <ScrollToTop />
-        <SideNav />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/coding" element={<Coding />} />
-          <Route path="/art" element={<Art />} />
-        </Routes>
+        {/* <ScrollToTop /> */}
+        {/* <SideNav /> */}
+        <Nav>
+          <Routes>
+            {/* <Route exact path="/" element={<Main />} /> */}
+
+            <Route exact path="/" element={<Home />} />
+            {/* <Route path="/music" element={<Music />} /> */}
+            {/* <Route path="/coding" element={<Coding />} /> */}
+            {/* <Route path="/art" element={<Art />} /> */}
+          </Routes>
+        </Nav>
         <Footer />
       </div>
     </ThemeProvider>
