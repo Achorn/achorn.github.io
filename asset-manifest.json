@@ -1,23 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b0f26ef.css",
-    "main.js": "/static/js/main.2b89e23b.js",
-    "static/js/787.c9df9596.chunk.js": "/static/js/787.c9df9596.chunk.js",
-    "static/media/red-blue-coding.JPG": "/static/media/red-blue-coding.1268a11fd52e5ce4ff1e.JPG",
+    "main.css": "/static/css/main.a722cd99.css",
+    "main.js": "/static/js/main.4ba1d727.js",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
-    "static/media/vinyl.png": "/static/media/vinyl.996abfd1e567c985a676.png",
-    "static/media/fallingDown.png": "/static/media/fallingDown.19e1e3c7b8f97d4567db.png",
-    "static/media/josh-with-guitar.jpg": "/static/media/josh-with-guitar.ae46125e4f478a438056.jpg",
-    "static/media/top.jpeg": "/static/media/top.17cdeddcfc5143744dd2.jpeg",
+    "static/media/selfie.jpg": "/static/media/selfie.e14b857f95e1b1ddf513.jpg",
     "static/media/sf-guessing-image.png": "/static/media/sf-guessing-image.a1b27ad006a75cc21801.png",
-    "static/media/redVinyl.png": "/static/media/redVinyl.b6a5cf910e9b26a3b1fd.png",
-    "static/media/tourguide.jpg": "/static/media/tourguide.0dec1a1c5a2bdd33ce97.jpg",
-    "static/media/car-map.png": "/static/media/car-map.80d4acb1f970890d05d0.png",
+    "static/media/sociopedia.jpg": "/static/media/sociopedia.10cb06bca090980f6bc3.jpg",
+    "static/media/toad.jpg": "/static/media/toad.99098e865c648f92cf67.jpg",
     "static/media/cu-boulder.png": "/static/media/cu-boulder.6017f7e409ea3e92c762.png",
-    "static/media/ascii-art-16.png": "/static/media/ascii-art-16.3a01810f645545bf6c5c.png",
     "static/media/myadcenter.jpg": "/static/media/myadcenter.8945d3baff823e1510f2.jpg",
-    "static/media/acorn-blog.png": "/static/media/acorn-blog.171a2ea5546b8521ea5f.png",
-    "static/media/clean-code-cover.jpg": "/static/media/clean-code-cover.471473b762443f6030f7.jpg",
     "static/media/aircover.png": "/static/media/aircover.13103118b8bb79aecc08.png",
     "static/media/acorn-medley.svg": "/static/media/acorn-medley.680ad2287dae111095a76619c482f98f.svg",
     "static/media/keyboard-icon.svg": "/static/media/keyboard-icon.698d1ab67baf4619cc1acb447a7aa4eb.svg",
@@ -25,12 +16,11 @@
     "static/media/flower-icon.svg": "/static/media/flower-icon.95df13627a46a49ea8e7ddfc22e0b764.svg",
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
-    "main.0b0f26ef.css.map": "/static/css/main.0b0f26ef.css.map",
-    "main.2b89e23b.js.map": "/static/js/main.2b89e23b.js.map",
-    "787.c9df9596.chunk.js.map": "/static/js/787.c9df9596.chunk.js.map"
+    "main.a722cd99.css.map": "/static/css/main.a722cd99.css.map",
+    "main.4ba1d727.js.map": "/static/js/main.4ba1d727.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b0f26ef.css",
-    "static/js/main.2b89e23b.js"
+    "static/css/main.a722cd99.css",
+    "static/js/main.4ba1d727.js"
   ]
 }
