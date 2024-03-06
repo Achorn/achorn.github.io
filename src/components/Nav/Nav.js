@@ -17,7 +17,12 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
-const navItems = ["About", "projects", "Blog", "Contact"];
+const navItems = [
+  "About",
+  "projects",
+  // "Blog",
+  "Contact",
+];
 
 const Nav = (props) => {
   const { window } = props;

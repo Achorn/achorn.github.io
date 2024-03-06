@@ -4,11 +4,13 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Divider } from "@mui/material";
 
 export default function Footer() {
   return (
     <div className="Footer">
-      <hr />
+      {/* <hr /> */}
+      <Divider />
       <div className="Footer-header">WHAT'S LEFT?</div>
       <div className="Social-media-container">
         <SocialButton

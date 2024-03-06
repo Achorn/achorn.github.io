@@ -1,25 +1,35 @@
 import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
 import profile from "../../assets/selfie.jpg";
 import sfImage from "../../assets/img/sf-guessing-image.png";
-import blogImage from "../../assets/img/acorn-blog.png";
+import photoAppImage from "../../assets/img/projectImg/sociopedia.jpg";
+import toadImage from "../../assets/img/projectImg/toad.jpg";
+import Project from "../../components/project.js/Project";
 
 const projects = [
   {
     title: "SF Neighborhood Quiz",
     techUsed: ["mongoDb", "Node", "Express", "Javascript"],
     description:
-      "a fun and easy way to test your knowledge of the greatest city in the US",
+      "A fun and easy way to test your knowledge of the greatest city in the US. includes map selections and review.",
     image: sfImage,
-    githubLink: "",
-    learnMoreLink: "",
+    liveLink: "https://joshuaachorn.com/sf-geography-quiz/",
+    ghLink: "https://github.com/Achorn/sf-geography-quiz",
   },
   {
-    title: "Acorn Blog",
-    techUsed: ["mongoDb", "Node", "Express", "React"],
-    description: "for sharing your photography with a like-minded community",
-    image: blogImage,
-    githubLink: "",
-    learnMoreLink: "",
+    title: "Photo Sharing App",
+    techUsed: ["mongoDb", "Node", "Express", "React", "Material UI"],
+    description: "A full-stack app for sharing your photography with others.",
+    image: photoAppImage,
+    ghLink: "https://github.com/Achorn/photo-app",
+  },
+  {
+    title: "Toad-agotchi",
+    techUsed: ["mongoDb", "Node", "Express", "React", "Material UI"],
+    description:
+      "A pet project of mine where I get to test out new technologies. mostly for experimenting with css animations and svgs",
+    image: toadImage,
+    liveLink: "https://joshuaachorn.com/toad-app/#/",
+    ghLink: "https://github.com/Achorn/toad-app",
   },
 ];
 
@@ -36,7 +46,7 @@ const Home = () => {
             fontWeight={500}
             sx={{ mb: "20px", fontWeight: 500 }}
           >
-            Hello! I'm Joshua, a full stack developer based in SF.
+            Hello! I'm Joshua, a full-stack developer based in SF.
           </Typography>
           <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
             I've had 3 years of working
@@ -49,8 +59,19 @@ const Home = () => {
             nisi ut culpa qui officia deserunt mollit anim id est laborum."
           </Typography>
 
-          <Button variant="contained">View Linkedin</Button>
-          <Button variant="outlined" sx={{ ml: "10px" }}>
+          <Button
+            variant="contained"
+            target="_blank"
+            href="https://www.linkedin.com/in/joshua-achorn/"
+          >
+            View Linkedin
+          </Button>
+          <Button
+            target="_blank"
+            href="https://github.com/Achorn"
+            variant="outlined"
+            sx={{ ml: "10px" }}
+          >
             View Github
           </Button>
         </Grid>
@@ -82,69 +103,19 @@ const Home = () => {
         </Grid>
       </Grid>
 
-      {/* About section */}
-      {/* <div>ABOUT</div> */}
       <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
 
       <Typography
         variant="h4"
         fontWeight="500"
         textAlign={"left"}
-        sx={{ mb: 5 }}
+        sx={{ mb: 10 }}
       >
         Selected Projects
       </Typography>
 
       {projects.map((project) => (
-        <Box sx={{ mb: 5 }}>
-          <Grid container spacing={4}>
-            <Grid
-              container
-              item
-              xs="12"
-              sm="6"
-              gap={2}
-              order={{ xs: 2, md: 1 }}
-              // justifyContent={"start"}
-              // alignItems={"start"}
-              alignContent={"start"}
-            >
-              <Typography variant="h5" textAlign={"left"}>
-                {project.title}
-              </Typography>
-
-              <Grid container spacing={0} gap={1}>
-                {project.techUsed.map((tech) => (
-                  <Button sx={{ textTransform: "none" }} size="small">
-                    {tech}
-                  </Button>
-                ))}
-              </Grid>
-              <Typography textAlign={"left"}>{project.description}</Typography>
-              <Button variant="outlined">live example</Button>
-
-              <Button variant="outlined">view github</Button>
-            </Grid>
-            <Grid item xs="12" sm="6" order={{ xs: 1, md: 2 }}>
-              <Card
-                sx={{
-                  width: "100%",
-                  height: 350,
-                  borderRadius: { sm: 1, md: 4 },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="100%"
-                  image={project.image}
-                  sx={{ objectFit: "cover" }}
-                  alt="project image"
-                />
-              </Card>
-              {/* </Box> */}
-            </Grid>
-          </Grid>
-        </Box>
+        <Project project={project} />
       ))}
 
       {/* <div>CONTACT</div> */}

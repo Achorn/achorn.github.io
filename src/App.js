@@ -23,8 +23,8 @@ function App() {
             {/* <Route path="/coding" element={<Coding />} /> */}
             {/* <Route path="/art" element={<Art />} /> */}
           </Routes>
-          {/* <Footer /> */}
         </Nav>
+        <Footer />
       </div>
     </ThemeProvider>
   );
