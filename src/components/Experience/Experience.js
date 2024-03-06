@@ -50,7 +50,7 @@ const Experience = () => {
         company={"CU Boulder"}
         title={"Data Structures CA"}
         description={
-          "A great experience learning how to communicate code in order to help students with their assignments. "
+          "Reinforced Data-structures fundamentals by  helping students with their assignments "
         }
       />
       {/* </div> */}

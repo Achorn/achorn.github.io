@@ -48,8 +48,9 @@
   /* margin: 20px; */
   display: flex;
 
+  gap: 30px;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
   justify-content: space-around;
   /* width: fit-content; */
   background-color: var(--bg-color);
@@ -60,7 +61,7 @@
   color: var(--primary_color);
 }
 .Job-image-container {
-  margin: 40px;
+  /* margin-right: 40px; */
   /* outline-style: solid; */
   /* outline-color: red; */
   height: 150px;
