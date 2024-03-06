@@ -118,6 +118,7 @@ const Home = () => {
         <Project key={project.title} project={project} />
       ))}
 
+      <Box id="experience" sx={{ mt: { xs: 0, md: "100px" } }} />
       <Typography
         variant="h4"
         fontWeight="500"
@@ -126,9 +127,7 @@ const Home = () => {
       >
         Experience
       </Typography>
-      <Box id="experience" sx={{ mt: { xs: 0, md: "100px" } }} />
 
-      {/* <div>CONTACT</div> */}
       <Experience />
 
       <Box sx={{ mt: { xs: "50px", md: "120px" } }} />
