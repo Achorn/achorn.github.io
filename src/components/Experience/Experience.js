@@ -66,26 +66,28 @@ function JobComponent({ date, image, company, title, description }) {
           <img src={image} className="Job-image" alt="logo" />
         </div>
         <div className="Job-title-description">
-          <Grid
-            container
-            sx={{
-              textAlign: { xs: "center", sm: "left" },
-              flexDirection: { xs: "column", sm: "row" },
-              gap: { xs: 1, sm: 2 },
-            }}
-          >
-            <Typography fontWeight={600}>{company.toUpperCase()}</Typography>
-            <Typography>{title}</Typography>
+          <Grid container gap={1}>
+            <Grid
+              container
+              sx={{
+                textAlign: "left",
+                flexDirection: { xs: "column", sm: "row" },
+                gap: { xs: 1, sm: 2 },
+              }}
+            >
+              <Typography fontWeight={600}>{company.toUpperCase()}</Typography>
+              <Typography sx={{ textAlign: "left" }}>{title}</Typography>
+            </Grid>
+            <Typography sx={{ textAlign: "left" }}> {date}</Typography>
+            <Typography
+              sx={{
+                color: "text.secondary",
+                textAlign: "left",
+              }}
+            >
+              {description}
+            </Typography>
           </Grid>
-          <Typography>{date}</Typography>
-          <Typography
-            sx={{
-              color: "text.secondary",
-              textAlign: { xs: "center", sm: "left" },
-            }}
-          >
-            {description}
-          </Typography>
         </div>
       </div>
     </div>

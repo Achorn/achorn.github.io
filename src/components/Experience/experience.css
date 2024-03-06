@@ -63,8 +63,8 @@
   margin: 4px;
   /* outline-style: solid; */
   /* outline-color: red; */
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
 }
 .Job-image {
   width: fit-content;
@@ -72,6 +72,8 @@
   width: 100%; /* or any custom size */
   height: 100%;
   object-fit: contain;
+  border-radius: 10px;
+
   /* height: 100%; */
   /* width: 100%; */
   /* object-fit: fit; */
