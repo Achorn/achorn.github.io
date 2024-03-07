@@ -62,9 +62,11 @@ function JobComponent({ date, image, company, title, description }) {
   return (
     <div>
       <div className="Job-component">
-        <div className="Job-image-container">
-          <img src={image} className="Job-image" alt="logo" />
-        </div>
+        {image && (
+          <div className="Job-image-container">
+            <img src={image} className="Job-image" alt="logo" />
+          </div>
+        )}
         <div className="Job-title-description">
           <Grid container gap={1}>
             <Grid

@@ -14,11 +14,18 @@ const Project = ({ project }) => {
           order={{ xs: 2, sm: 1 }}
           alignContent={"start"}
         >
-          <Typography variant="h5" textAlign={"left"}>
+          <Typography variant="h5" textAlign={"left"} fontWeight={500}>
             {project.title}
           </Typography>
 
           <Grid container spacing={0} gap={1}>
+            <Typography
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              Stack:{" "}
+            </Typography>
             {project.techUsed.map((tech, i) => (
               <Button
                 key={tech + i}
