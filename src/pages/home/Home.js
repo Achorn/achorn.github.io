@@ -5,6 +5,7 @@ import photoAppImage from "../../assets/img/projectImg/sociopedia.jpg";
 import toadImage from "../../assets/img/projectImg/toad.jpg";
 import Project from "../../components/project.js/Project";
 import Experience from "../../components/Experience/Experience";
+import CUImage from "../../assets/img/cu-boulder.jpg";
 
 const projects = [
   {
@@ -129,6 +130,67 @@ const Home = () => {
         sx={{ mb: 10 }}
       >
         Experience
+      </Typography>
+
+      <Typography
+        variant="h5"
+        fontWeight="500"
+        textAlign={"left"}
+        sx={{ mb: 5 }}
+      >
+        Education
+      </Typography>
+      <Grid container spacing={2} sx={{ mb: 10 }}>
+        <Grid item textAlign={"left"} sm={12} md={4} order={{ xs: 2, md: 1 }}>
+          <Grid container gap={2}>
+            <Typography fontWeight={700}>
+              Colorado University at Boulder
+            </Typography>
+            <Grid container gap={1}>
+              <Typography fontWeight={500}>Major: </Typography>
+              <Typography sx={{ color: "text.secondary" }}>
+                Computer Science
+              </Typography>
+            </Grid>
+            <Grid container gap={1}>
+              <Typography fontWeight={500}> Minor:</Typography>
+              <Typography sx={{ color: "text.secondary" }}>
+                Technology Arts & Media
+              </Typography>
+            </Grid>
+            <Grid container gap={1}>
+              <Typography fontWeight={500}>GPA:</Typography>
+              <Typography sx={{ color: "text.secondary" }}>3.4</Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item sm={12} md={8} order={{ xs: 1, md: 2 }}>
+          <Card
+            sx={{
+              width: "100%",
+              height: 220,
+              borderRadius: 3,
+            }}
+          >
+            <CardMedia
+              component="img"
+              // height="100%"
+              // width="100%"
+              image={CUImage}
+              alt="profile photo"
+              sx={{ objectPosition: "0 25%" }}
+            />
+          </Card>
+        </Grid>
+      </Grid>
+
+      <Typography
+        variant="h5"
+        fontWeight="500"
+        textAlign={"left"}
+        sx={{ mb: 10 }}
+      >
+        Professional
       </Typography>
 
       <Experience />
