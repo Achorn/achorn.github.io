@@ -141,46 +141,50 @@ const Home = () => {
         Education
       </Typography>
       <Grid container spacing={2} sx={{ mb: 10 }}>
-        <Grid item textAlign={"left"} sm={12} md={4} order={{ xs: 2, md: 1 }}>
-          <Grid container gap={2}>
-            <Typography fontWeight={700}>
-              Colorado University at Boulder
-            </Typography>
-            <Grid container gap={1}>
-              <Typography fontWeight={500}>Major: </Typography>
-              <Typography sx={{ color: "text.secondary" }}>
-                Computer Science
-              </Typography>
-            </Grid>
-            <Grid container gap={1}>
-              <Typography fontWeight={500}> Minor:</Typography>
-              <Typography sx={{ color: "text.secondary" }}>
-                Technology Arts & Media
-              </Typography>
-            </Grid>
-            <Grid container gap={1}>
-              <Typography fontWeight={500}>GPA:</Typography>
-              <Typography sx={{ color: "text.secondary" }}>3.4</Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item sm={12} md={8} order={{ xs: 1, md: 2 }}>
+        <Grid item xs={12}>
           <Card
             sx={{
               width: "100%",
-              height: 220,
+              height: 300,
               borderRadius: 3,
             }}
           >
             <CardMedia
               component="img"
-              // height="100%"
+              height="100%"
               // width="100%"
               image={CUImage}
               alt="profile photo"
-              sx={{ objectPosition: "0 25%" }}
+              sx={{ objectPosition: "0 10%" }}
             />
           </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container textAlign={"left"} sm={12} spacing={2}>
+            {/* <Grid container gap={2}> */}
+            <Grid item xs={12} sm={6}>
+              <Typography fontWeight={700}>
+                University of Colorado at Boulder{" "}
+              </Typography>
+            </Grid>
+            <Grid item container gap={1} xs={12} sm={6}>
+              <Typography fontWeight={500}>GPA:</Typography>
+              <Typography sx={{ color: "text.secondary" }}>3.4</Typography>
+            </Grid>
+            <Grid item container gap={1} xs={12} sm={6}>
+              <Typography fontWeight={500}>Major: </Typography>
+              <Typography sx={{ color: "text.secondary" }}>
+                Computer Science
+              </Typography>
+            </Grid>
+            <Grid item container gap={1} xs={12} sm={6}>
+              <Typography fontWeight={500}> Minor:</Typography>
+              <Typography sx={{ color: "text.secondary" }}>
+                Technology Arts & Media
+              </Typography>
+            </Grid>
+          </Grid>
+          {/* </Grid> */}
         </Grid>
       </Grid>
 
