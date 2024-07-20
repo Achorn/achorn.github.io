@@ -17,21 +17,45 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
+
 const navItems = [
-  "about",
-  "projects",
-  "experience",
-  // "Blog",
-  // "Contact",
+  {
+    title: "about",
+    action: () => {
+      scrollToSection("about");
+    },
+  },
+  {
+    title: "projects",
+    action: () => {
+      scrollToSection("projects");
+    },
+  },
+  {
+    title: "experience",
+    action: () => {
+      scrollToSection("experience");
+    },
+  },
+  {
+    title: "blog",
+    action: () => {
+      window.location.href = "https://joshuaachorn.com/blog/";
+    },
+  },
 ];
-const handleClick = (id) => {
-  const element = document.getElementById(id);
+const scrollToSection = (section) => {
+  const element = document.getElementById(section);
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   }
-
-  console.log("clicked");
 };
+// const handleClick = (id) => {
+//   const element = document.getElementById(id);
+//   if (element) {
+//     element.scrollIntoView({ behavior: "smooth" });
+//   }
+// };
 
 const Nav = (props) => {
   const { window } = props;
@@ -50,12 +74,9 @@ const Nav = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: "center" }}
-              onClick={() => handleClick(item)}
-            >
-              <ListItemText primary={item} />
+          <ListItem key={item.title} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }} onClick={item.action}>
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -108,11 +129,11 @@ const Nav = (props) => {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.title}
                 sx={{ color: "text.secondary" }}
-                onClick={() => handleClick(item)}
+                onClick={item.action}
               >
-                {item}
+                {item.title}
               </Button>
             ))}
           </Box>
