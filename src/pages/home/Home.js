@@ -4,10 +4,20 @@ import sfImage from "../../assets/img/sf-guessing-image.png";
 import photoAppImage from "../../assets/img/projectImg/sociopedia.jpg";
 import toadImage from "../../assets/img/projectImg/toad.jpg";
 import Project from "../../components/project.js/Project";
+import spaceImage from "../../assets/img/projectImg/space_game.jpg";
 import Experience from "../../components/Experience/Experience";
 import CUImage from "../../assets/img/cu-boulder.jpg";
 
 const projects = [
+  {
+    title: "My Little Spaceship",
+    techUsed: ["Javascript", "THREEjs"],
+    description:
+      "My web based game I'm currently making from scratch, applying the knowledge I've learned from THREEjs lessons and game pattern books to make a custom game engine with object oriented coding",
+    image: spaceImage,
+    liveLink: "https://space-ship-game-delta.vercel.app/",
+    ghLink: "https://joshuaachorn.com/blog/",
+  },
   {
     title: "SF Neighborhood Quiz",
     techUsed: ["mongoDb", "Node", "Express", "Javascript"],
@@ -47,7 +57,8 @@ const Home = () => {
             fontWeight={500}
             sx={{ mb: "20px", fontWeight: 500 }}
           >
-            Hello! I'm Joshua, a full-stack developer based in SF.
+            Hello! I'm Joshua, a full-stack developer pivoting into Game
+            Development.
           </Typography>
 
           <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
