@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.448e0b3d.css",
-    "main.js": "/static/js/main.3078d51a.js",
+    "main.js": "/static/js/main.73a0180e.js",
     "static/media/design.jpg": "/static/media/design.c088a691a8463faea7fd.jpg",
     "static/media/selfie.jpg": "/static/media/selfie.e14b857f95e1b1ddf513.jpg",
     "static/media/vinyl.png": "/static/media/vinyl.996abfd1e567c985a676.png",
@@ -10,10 +10,11 @@
     "static/media/top.jpeg": "/static/media/top.17cdeddcfc5143744dd2.jpeg",
     "static/media/sf-guessing-image.png": "/static/media/sf-guessing-image.a1b27ad006a75cc21801.png",
     "static/media/space_game.jpg": "/static/media/space_game.e1a45399b3b06a145ac9.jpg",
-    "static/media/sociopedia.jpg": "/static/media/sociopedia.10cb06bca090980f6bc3.jpg",
+    "static/media/Screenshot 2025-03-29 at 11.52.40 AM.png": "/static/media/Screenshot 2025-03-29 at 11.52.40 AM.3eb8aa7421414f367399.png",
     "static/media/redVinyl.png": "/static/media/redVinyl.b6a5cf910e9b26a3b1fd.png",
     "static/media/tourguide.jpg": "/static/media/tourguide.0dec1a1c5a2bdd33ce97.jpg",
     "static/media/toad.jpg": "/static/media/toad.99098e865c648f92cf67.jpg",
+    "static/media/brik-brek.jpg": "/static/media/brik-brek.cafc6cfe51b370e31293.jpg",
     "static/media/cu-boulder.jpg": "/static/media/cu-boulder.9bfe0caf1a8127c09e8a.jpg",
     "static/media/cu-boulder.png": "/static/media/cu-boulder.6017f7e409ea3e92c762.png",
     "static/media/myadcenter.jpg": "/static/media/myadcenter.8945d3baff823e1510f2.jpg",
@@ -25,10 +26,10 @@
     "static/media/acorn.svg": "/static/media/acorn.c7d7aef178b696248a7e871812d43c2f.svg",
     "index.html": "/index.html",
     "main.448e0b3d.css.map": "/static/css/main.448e0b3d.css.map",
-    "main.3078d51a.js.map": "/static/js/main.3078d51a.js.map"
+    "main.73a0180e.js.map": "/static/js/main.73a0180e.js.map"
   },
   "entrypoints": [
     "static/css/main.448e0b3d.css",
-    "static/js/main.3078d51a.js"
+    "static/js/main.73a0180e.js"
   ]
 }
