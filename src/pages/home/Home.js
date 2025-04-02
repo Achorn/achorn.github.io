@@ -1,7 +1,8 @@
 import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
 import profile from "../../assets/selfie.jpg";
 import sfImage from "../../assets/img/sf-guessing-image.png";
-import photoAppImage from "../../assets/img/projectImg/sociopedia.jpg";
+import brikBrekImage from "../../assets/img/projectImg/brik-brek.jpg";
+import ballRollingImage from "../../assets/img/projectImg/Screenshot 2025-03-29 at 11.52.40 AM.png";
 import toadImage from "../../assets/img/projectImg/toad.jpg";
 import Project from "../../components/project.js/Project";
 import spaceImage from "../../assets/img/projectImg/space_game.jpg";
@@ -10,29 +11,40 @@ import CUImage from "../../assets/img/cu-boulder.jpg";
 
 const projects = [
   {
+    title: "Ball Physics Racer",
+    techUsed: ["Javascript", "THREEjs", "React"],
+    description:
+      "A 3D ball rolling racing game I learned how to make following the THREEjs Journey course taught by Bruno Simon. Includes Physics, game mechanics",
+    image: ballRollingImage,
+    liveLink: "https://66-create-a-game-with-r3f-five.vercel.app/",
+    ghLink: "https://github.com/Achorn/Ball-physics-racer",
+  },
+  {
     title: "My Little Spaceship",
     techUsed: ["Javascript", "THREEjs"],
     description:
       "My web based game I'm currently making from scratch, applying the knowledge I've learned from THREEjs lessons and game pattern books to make a custom game engine with object oriented coding",
     image: spaceImage,
     liveLink: "https://space-ship-game-delta.vercel.app/",
-    ghLink: "https://joshuaachorn.com/blog/",
+    ghLink: "https://github.com/Achorn/space-ship-game",
+  },
+  {
+    title: "Brik Brek",
+    techUsed: ["javascript", "html", "css", "canvas"],
+    description:
+      "a classic brick breaker. Another simple project to work with game design patters/math without following a step by step turorial",
+    image: brikBrekImage,
+    liveLink: "https://brick-brek.vercel.app/",
+    ghLink: "https://github.com/Achorn/brik-brek",
   },
   {
     title: "SF Neighborhood Quiz",
     techUsed: ["mongoDb", "Node", "Express", "Javascript"],
     description:
-      "A fun and easy way to test your knowledge of the greatest city in the US. includes map selections and review.",
+      "A fun and easy way to test your knowledge of one of the greatest cities in the US. Includes map selections and review.",
     image: sfImage,
     liveLink: "https://joshuaachorn.com/sf-geography-quiz/",
     ghLink: "https://github.com/Achorn/sf-geography-quiz",
-  },
-  {
-    title: "Photo Sharing App",
-    techUsed: ["mongoDb", "Node", "Express", "React", "Material UI"],
-    description: "A full-stack app for sharing your photography with others.",
-    image: photoAppImage,
-    ghLink: "https://github.com/Achorn/photo-app",
   },
   {
     title: "Toad-agotchi",
@@ -57,17 +69,18 @@ const Home = () => {
             fontWeight={500}
             sx={{ mb: "20px", fontWeight: 500 }}
           >
-            Hello! I'm Joshua, a full-stack developer pivoting into Game
-            Development.
+            Hello! I'm Joshua - Application developer, videogame developer, and
+            artist
           </Typography>
 
           <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
             I'm a collaborative software engineer with 3 years of experience.
           </Typography>
           <Typography variant="body1" align="left" sx={{ mb: "10px" }}>
-            As a founding member in early stage startups, I've worked closely
-            with CEOs to build apps from the ground up, flourishing in
-            autonomous environments with a keen eye for detail.
+            A founding member in early stage startups. I've worked closely with
+            CEOs to build apps from the ground up. Recently I've been enjoying
+            making 3d web app games with THREEjs. You'll likely find me drawing
+            on my ipad using procreate.
           </Typography>
           <Typography
             variant="body1"
