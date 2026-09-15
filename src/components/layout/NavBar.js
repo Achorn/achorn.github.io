@@ -15,7 +15,6 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ReactComponent as AcornIcon } from "../../assets/acorn.svg";
 import navigation from "../../data/navigation";
 import ColorModeToggle from "./ColorModeToggle";
 import { CONTENT_MAX_WIDTH } from "./constants";
@@ -27,17 +26,6 @@ const navLinkProps = (item) =>
   item.external
     ? { component: "a", href: item.href, target: "_blank", rel: "noreferrer" }
     : { component: NavLink, to: item.to };
-
-/** The acorn follows the text colour, so it works in both themes. */
-const Wordmark = ({ size = 17 }) => (
-  <>
-    <AcornIcon
-      aria-hidden="true"
-      style={{ height: size, width: "auto", flexShrink: 0 }}
-    />
-    <span>joshua achorn</span>
-  </>
-);
 
 /** Heavier and tighter than the nav links, which is all it needs to lead. */
 const wordmarkSx = {
@@ -54,17 +42,8 @@ const NavBar = () => {
 
   const drawer = (
     <Box onClick={closeDrawer} sx={{ py: 2 }}>
-      <Typography
-        sx={{
-          ...wordmarkSx,
-          display: "flex",
-          alignItems: "center",
-          gap: 1,
-          px: 3,
-          pb: 2,
-        }}
-      >
-        <Wordmark size={16} />
+      <Typography sx={{ ...wordmarkSx, display: "block", px: 3, pb: 2 }}>
+        joshua achorn
       </Typography>
       <Divider />
       <List sx={{ pt: 1 }}>
@@ -116,16 +95,9 @@ const NavBar = () => {
           <Typography
             component={RouterLink}
             to="/"
-            aria-label="Joshua Achorn — home"
-            sx={{
-              ...wordmarkSx,
-              flexGrow: 1,
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-            }}
+            sx={{ ...wordmarkSx, flexGrow: 1 }}
           >
-            <Wordmark />
+            joshua achorn
           </Typography>
 
           <Box

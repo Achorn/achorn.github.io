@@ -1,4 +1,5 @@
 import { Box, IconButton, Stack } from "@mui/material";
+import { ReactComponent as AcornIcon } from "../../assets/acorn.svg";
 import social from "../../data/social";
 
 const Footer = () => (
@@ -11,9 +12,15 @@ const Footer = () => (
       borderTop: 1,
       borderColor: "divider",
       display: "flex",
-      justifyContent: "flex-end",
+      alignItems: "center",
+      justifyContent: "space-between",
     }}
   >
+    <AcornIcon
+      aria-hidden="true"
+      style={{ height: 30, width: "auto", opacity: 0.55 }}
+    />
+
     <Stack direction="row" spacing={0.5}>
       {social.map(({ id, label, Icon, href }) => (
         <IconButton
