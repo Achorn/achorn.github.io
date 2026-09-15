@@ -13,6 +13,9 @@ const Layout = () => (
       minHeight: "100vh",
       display: "flex",
       flexDirection: "column",
+      // Project bands run the full width of the window; clip rather than
+      // hide so the sticky app bar keeps working.
+      overflowX: "clip",
     }}
   >
     <ScrollToTop />
