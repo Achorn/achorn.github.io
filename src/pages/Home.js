@@ -1,80 +1,74 @@
-import { Box, Button, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
-import profile from "../assets/selfie.jpg";
+import { Box, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import ArrowLink from "../components/ArrowLink";
 import ProjectCard from "../components/cards/ProjectCard";
+import profile from "../assets/selfie.jpg";
 import { featuredProjects } from "../data/projects";
+import { MEASURE } from "../theme/tokens";
+import { experiencePhrase } from "../data/profile";
 
 const Home = () => (
   <>
-    <Grid container spacing={4} alignItems="center">
-      <Grid item order={{ xs: 2, md: 1 }} xs={12} md={8} sx={{ textAlign: "left" }}>
-        <Typography variant="h4" component="h1" fontWeight={500} sx={{ mb: 3 }}>
-          Hello! I'm Joshua — application developer, videogame developer, and
-          artist
+    <Grid container spacing={{ xs: 4, md: 7 }} alignItems="start">
+      <Grid item order={{ xs: 2, md: 1 }} xs={12} md={7}>
+        <Typography variant="overline" component="p" sx={{ color: "text.secondary", mb: 2 }}>
+          application developer · game developer · artist
         </Typography>
 
-        <Typography sx={{ mb: 2, color: "text.secondary" }}>
-          I'm a collaborative software engineer with 3 years of experience.
+        <Typography variant="h1" component="h1" sx={{ mb: 3 }}>
+          hello, i'm joshua
         </Typography>
-        <Typography sx={{ mb: 4, color: "text.secondary" }}>
+
+        <Typography sx={{ mb: 2, color: "text.secondary", maxWidth: MEASURE }}>
+          I'm a collaborative software engineer with {experiencePhrase()} of
+          experience.
+        </Typography>
+        <Typography sx={{ mb: 4, color: "text.secondary", maxWidth: MEASURE }}>
           A founding member of early stage startups, I've worked closely with
           CEOs to build apps from the ground up. Recently I've been enjoying
           making 3D web games with Three.js. You'll likely find me drawing on my
           iPad in Procreate.
         </Typography>
 
-        <Stack direction="row" spacing={2} useFlexGap flexWrap="wrap">
-          <Button
-            variant="contained"
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/joshua-achorn/"
-          >
-            View LinkedIn
-          </Button>
-          <Button
-            variant="outlined"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Achorn"
-          >
-            View GitHub
-          </Button>
+        <Stack direction="row" spacing={3} useFlexGap flexWrap="wrap">
+          <ArrowLink href="https://www.linkedin.com/in/joshua-achorn/">linkedin</ArrowLink>
+          <ArrowLink href="https://github.com/Achorn">github</ArrowLink>
+          <ArrowLink to="/about">more about me</ArrowLink>
         </Stack>
       </Grid>
 
-      <Grid item xs={12} md={4} order={{ xs: 1, md: 2 }}>
-        <Box display="flex" justifyContent={{ xs: "center", md: "flex-end" }}>
-          <Card
-            sx={{
-              width: { xs: "100%", md: "85%" },
-              height: 350,
-              borderRadius: { xs: 1, md: 4 },
-            }}
-          >
-            <CardMedia
-              component="img"
-              height="100%"
-              image={profile}
-              alt="Joshua Achorn"
-            />
-          </Card>
-        </Box>
+      <Grid item xs={12} md={5} order={{ xs: 1, md: 2 }}>
+        <Card sx={{ width: "100%", aspectRatio: "4 / 5" }}>
+          <CardMedia
+            component="img"
+            image={profile}
+            alt="Joshua Achorn"
+            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </Card>
       </Grid>
     </Grid>
 
-    <Box sx={{ mt: { xs: 8, md: 15 } }}>
-      <Typography variant="h4" component="h2" fontWeight={500} sx={{ mb: 8, textAlign: "left" }}>
-        Featured Projects
-      </Typography>
+    <Box sx={{ mt: { xs: 9, md: 14 } }}>
+      <Stack
+        direction="row"
+        alignItems="baseline"
+        justifyContent="space-between"
+        spacing={2}
+        sx={{ mb: { xs: 5, md: 7 } }}
+      >
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{ "&::before": { content: '"// "', color: "text.secondary" } }}
+        >
+          featured work
+        </Typography>
+        <ArrowLink to="/projects">all projects</ArrowLink>
+      </Stack>
 
-      {featuredProjects.map((project, index) => (
-        <ProjectCard key={project.id} project={project} reversed={index % 2 === 1} />
+      {featuredProjects.map((project) => (
+        <ProjectCard key={project.id} project={project} />
       ))}
-
-      <Button component={RouterLink} to="/projects" variant="outlined" size="large">
-        See all projects
-      </Button>
     </Box>
   </>
 );

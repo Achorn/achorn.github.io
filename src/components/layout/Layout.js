@@ -7,17 +7,23 @@ import { CONTENT_MAX_WIDTH } from "./constants";
 
 /** App shell: fixed nav, routed page, footer. Rendered once, around every route. */
 const Layout = () => (
-  <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
+  <Box
+    sx={{
+      bgcolor: "background.default",
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+    }}
+  >
     <ScrollToTop />
     <NavBar />
     <Container
-      component="main"
       maxWidth={false}
-      sx={{ maxWidth: CONTENT_MAX_WIDTH, textAlign: "center" }}
+      sx={{ maxWidth: CONTENT_MAX_WIDTH, width: "100%", flexGrow: 1 }}
     >
       {/* Spacer matching the fixed AppBar. */}
       <Toolbar />
-      <Box sx={{ pt: { xs: 4, md: 8 } }}>
+      <Box component="main" sx={{ pt: { xs: 6, md: 10 } }}>
         <Outlet />
       </Box>
       <Footer />

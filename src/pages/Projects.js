@@ -5,16 +5,12 @@ import projects from "../data/projects";
 const Projects = () => (
   <>
     <PageHeader
-      title="Projects"
+      title="projects"
       subtitle="Games, tools, and apps — most of them built to learn something specific."
     />
 
-    {projects.map((project, index) => (
-      <ProjectCard
-        key={project.id}
-        project={project}
-        reversed={index % 2 === 1}
-      />
+    {projects.map((project) => (
+      <ProjectCard key={project.id} project={project} />
     ))}
   </>
 );

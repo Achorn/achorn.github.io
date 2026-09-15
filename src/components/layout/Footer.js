@@ -1,19 +1,32 @@
-import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
-import { ReactComponent as AcornIcon } from "../../assets/acorn.svg";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import social from "../../data/social";
 
 const Footer = () => (
-  <Box component="footer" sx={{ mt: 12, pb: 6 }}>
-    <Divider />
-    <Typography
-      variant="overline"
-      component="p"
-      sx={{ mt: 4, letterSpacing: 2, color: "text.secondary" }}
-    >
-      What's left?
-    </Typography>
+  <Box
+    component="footer"
+    sx={{
+      mt: { xs: 10, md: 16 },
+      pt: 4,
+      pb: 6,
+      borderTop: 1,
+      borderColor: "divider",
+      display: "flex",
+      flexDirection: { xs: "column", sm: "row" },
+      alignItems: { xs: "flex-start", sm: "center" },
+      justifyContent: "space-between",
+      gap: 3,
+    }}
+  >
+    <Box>
+      <Typography variant="overline" component="p" sx={{ color: "text.secondary" }}>
+        joshua achorn
+      </Typography>
+      <Typography variant="body2" sx={{ color: "text.secondary", mt: 0.5 }}>
+        built with react. all ten fingers.
+      </Typography>
+    </Box>
 
-    <Stack direction="row" spacing={1} justifyContent="center" sx={{ my: 2 }}>
+    <Stack direction="row" spacing={0.5}>
       {social.map(({ id, label, Icon, href }) => (
         <IconButton
           key={id}
@@ -21,21 +34,15 @@ const Footer = () => (
           target="_blank"
           rel="noreferrer"
           aria-label={label}
-          sx={{ color: "text.primary" }}
+          sx={{
+            color: "text.secondary",
+            "&:hover": { color: "primary.main", bgcolor: "transparent" },
+          }}
         >
-          <Icon size="24px" />
+          <Icon size="17px" />
         </IconButton>
       ))}
     </Stack>
-
-    <AcornIcon
-      aria-hidden="true"
-      style={{ height: 40, width: "auto", opacity: 0.6 }}
-    />
-
-    <Typography variant="body2" sx={{ mt: 2, color: "text.secondary" }}>
-      this website was made with | React | JavaScript | All 10 of my fingers
-    </Typography>
   </Box>
 );
 

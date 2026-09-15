@@ -5,7 +5,7 @@ import { Box, Link, Stack, Typography } from "@mui/material";
  * The sleeve is a fixed square; the wrapper widens on hover to reveal the disc.
  */
 const AlbumCard = ({ album }) => (
-  <Stack spacing={2} alignItems="center">
+  <Stack spacing={2}>
     <Link
       href={album.link}
       target="_blank"
@@ -16,43 +16,31 @@ const AlbumCard = ({ album }) => (
       <Box
         sx={{
           position: "relative",
-          height: 220,
+          height: 200,
           aspectRatio: "1 / 1",
           transition: "aspect-ratio 450ms ease, transform 450ms ease",
-          "&:hover": {
-            aspectRatio: "570 / 400",
-            transform: "translateY(-10px)",
-          },
+          "&:hover": { aspectRatio: "570 / 400", transform: "translateY(-8px)" },
+          "@media (prefers-reduced-motion: reduce)": { transition: "none" },
         }}
       >
-        <Box
-          component="img"
-          src={album.vinyl}
-          alt=""
-          aria-hidden="true"
-          sx={{ height: "100%", float: "right" }}
-        />
+        <Box component="img" src={album.vinyl} alt="" aria-hidden="true" sx={{ height: "100%", float: "right" }} />
         <Box
           component="img"
           src={album.cover}
           alt={`${album.title} album cover`}
-          sx={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            height: "100%",
-            borderRadius: "3px",
-          }}
+          sx={{ position: "absolute", left: 0, top: 0, height: "100%" }}
         />
       </Box>
     </Link>
 
-    <Box sx={{ textAlign: "center" }}>
-      <Typography fontWeight={700}>{album.title.toUpperCase()}</Typography>
-      <Typography variant="body2" sx={{ color: "text.secondary" }}>
+    <Stack direction="row" alignItems="baseline" justifyContent="space-between" spacing={2}>
+      <Typography variant="h5" component="h2">
+        {album.title}
+      </Typography>
+      <Typography variant="overline" sx={{ color: "text.secondary" }}>
         {album.year}
       </Typography>
-    </Box>
+    </Stack>
   </Stack>
 );
 

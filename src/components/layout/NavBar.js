@@ -19,7 +19,7 @@ import navigation from "../../data/navigation";
 import ColorModeToggle from "./ColorModeToggle";
 import { CONTENT_MAX_WIDTH } from "./constants";
 
-const DRAWER_WIDTH = 240;
+const DRAWER_WIDTH = 260;
 
 /** One nav entry, as either a router link or an outbound link. */
 const navLinkProps = (item) =>
@@ -27,27 +27,41 @@ const navLinkProps = (item) =>
     ? { component: "a", href: item.href, target: "_blank", rel: "noreferrer" }
     : { component: NavLink, to: item.to };
 
+/** Heavier and tighter than the nav links, which is all it needs to lead. */
+const wordmarkSx = {
+  fontSize: "clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem)",
+  fontWeight: 700,
+  letterSpacing: "-0.01em",
+  color: "text.primary",
+  textDecoration: "none",
+};
+
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeDrawer = () => setMobileOpen(false);
 
   const drawer = (
-    <Box onClick={closeDrawer} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Joshua Achorn
+    <Box onClick={closeDrawer} sx={{ py: 2 }}>
+      <Typography sx={{ ...wordmarkSx, display: "block", px: 3, pb: 2 }}>
+        joshua achorn
       </Typography>
       <Divider />
-      <List>
+      <List sx={{ pt: 1 }}>
         {navigation.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
               {...navLinkProps(item)}
               sx={{
-                textAlign: "center",
-                "&.active": { fontWeight: 700 },
+                px: 3,
+                color: "text.secondary",
+                "&.active": { color: "text.primary" },
+                "&.active .MuiTypography-root": { fontWeight: 600 },
               }}
             >
-              <ListItemText primary={item.label} />
+              <ListItemText
+                primary={item.label}
+                primaryTypographyProps={{ fontSize: 15.5 }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,54 +71,44 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar
-        component="header"
-        elevation={0}
-        sx={{
-          bgcolor: "background.default",
-          color: "text.secondary",
-          borderBottom: 1,
-          borderColor: "divider",
-        }}
-      >
-        <Toolbar sx={{ maxWidth: CONTENT_MAX_WIDTH, width: "100%", mx: "auto" }}>
+      <AppBar component="header" position="fixed">
+        <Toolbar
+          disableGutters
+          sx={{
+            maxWidth: CONTENT_MAX_WIDTH,
+            width: "100%",
+            mx: "auto",
+            px: { xs: 2, sm: 3 },
+            minHeight: { xs: 62, md: 74 },
+            gap: 2,
+          }}
+        >
           <IconButton
             aria-label="open navigation"
             edge="start"
-            color="inherit"
             onClick={() => setMobileOpen((open) => !open)}
-            sx={{ mr: 2, display: { md: "none" } }}
+            sx={{ display: { md: "none" }, color: "text.primary", ml: -1 }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="small" />
           </IconButton>
 
-          <Typography
-            variant="h6"
-            component={RouterLink}
-            to="/"
-            sx={{
-              flexGrow: 1,
-              textAlign: "left",
-              color: "inherit",
-              textDecoration: "none",
-              display: { xs: "none", sm: "block" },
-            }}
-          >
-            Joshua Achorn
+          <Typography component={RouterLink} to="/" sx={{ ...wordmarkSx, flexGrow: 1 }}>
+            joshua achorn
           </Typography>
 
           <Box
             component="nav"
             aria-label="Main"
-            sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}
+            sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 0.5 }}
           >
             {navigation.map((item) => (
               <Button
                 key={item.label}
                 {...navLinkProps(item)}
+                variant="text"
                 sx={{
                   color: "text.secondary",
-                  "&.active": { color: "text.primary", fontWeight: 700 },
+                  "&.active": { color: "text.primary", fontWeight: 600 },
                 }}
               >
                 {item.label}
@@ -112,7 +116,7 @@ const NavBar = () => {
             ))}
           </Box>
 
-          <ColorModeToggle sx={{ ml: { xs: "auto", md: 1 } }} />
+          <ColorModeToggle sx={{ color: "text.secondary", mr: -1 }} />
         </Toolbar>
       </AppBar>
 
@@ -127,6 +131,10 @@ const NavBar = () => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: DRAWER_WIDTH,
+              bgcolor: "background.default",
+              backgroundImage: "none",
+              borderRight: 1,
+              borderColor: "divider",
             },
           }}
         >

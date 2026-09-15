@@ -1,18 +1,21 @@
-import { Button, Stack, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
+import ArrowLink from "../components/ArrowLink";
+import { MEASURE } from "../theme/tokens";
 
 const NotFound = () => (
-  <Stack spacing={3} alignItems="center" sx={{ py: 10 }}>
-    <Typography variant="h4" component="h1" fontWeight={500}>
-      Nothing here
+  <Box sx={{ py: { xs: 6, md: 10 } }}>
+    <Typography
+      variant="h1"
+      component="h1"
+      sx={{ "&::before": { content: '"// "', color: "text.secondary" } }}
+    >
+      404
     </Typography>
-    <Typography sx={{ color: "text.secondary" }}>
+    <Typography sx={{ mt: 2.5, mb: 4, color: "text.secondary", maxWidth: MEASURE }}>
       That page doesn't exist — or it moved when the site was reorganized.
     </Typography>
-    <Button component={RouterLink} to="/" variant="outlined">
-      Back home
-    </Button>
-  </Stack>
+    <ArrowLink to="/">back home</ArrowLink>
+  </Box>
 );
 
 export default NotFound;
