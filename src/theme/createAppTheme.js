@@ -86,18 +86,6 @@ const createAppTheme = (mode = "light") => {
         },
       },
 
-      MuiCard: {
-        defaultProps: { elevation: 0 },
-        styleOverrides: {
-          root: {
-            border: `1px solid ${c.rule}`,
-            backgroundColor: c.ruleSoft,
-            backgroundImage: "none",
-            borderRadius: 0,
-          },
-        },
-      },
-
       MuiAppBar: {
         defaultProps: { elevation: 0, color: "transparent" },
         styleOverrides: {

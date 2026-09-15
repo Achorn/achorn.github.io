@@ -2,7 +2,7 @@
 // See https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
-// jsdom implements neither of these, and both run on first paint.
+// jsdom implements none of these, and all of them run on first paint.
 window.scrollTo = () => {};
 window.matchMedia =
   window.matchMedia ||
@@ -12,3 +12,11 @@ window.matchMedia =
     addEventListener: () => {},
     removeEventListener: () => {},
   }));
+
+class StubIntersectionObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+window.IntersectionObserver = window.IntersectionObserver || StubIntersectionObserver;
+global.IntersectionObserver = global.IntersectionObserver || StubIntersectionObserver;

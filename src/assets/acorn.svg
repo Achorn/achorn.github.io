@@ -10,7 +10,7 @@ xmlns="http://www.w3.org/2000/svg"
 <!-- Created by potrace 1.10, written by Peter Selinger 2001-2011 -->
 <!-- </metadata> -->
 <g transform="translate(0.000000,87.000000) scale(0.100000,-0.100000)"
-fill="ffffff"
+fill="currentColor"
  stroke="none">
 <path d="M124 820 c-25 -37 -26 -44 -16 -78 10 -31 9 -42 -8 -72 -54 -95 -64
 -125 -64 -195 0 -56 4 -78 22 -107 22 -36 45 -52 56 -41 12 12 6 47 -11 65

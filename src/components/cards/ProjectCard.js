@@ -1,26 +1,13 @@
-import { Box, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import ArrowLink from "../ArrowLink";
+import Figure, { FigurePlaceholder } from "../Figure";
 import { MEASURE } from "../../theme/tokens";
 
-/** Shown for projects that do not have a screenshot yet. */
-const ImagePlaceholder = ({ title }) => (
-  <Box
-    sx={{
-      position: "absolute",
-      inset: 0,
-      display: "flex",
-      alignItems: "flex-end",
-      p: 2,
-    }}
-  >
-    <Typography variant="overline" sx={{ color: "text.secondary" }}>
-      {title} — screenshot to come
-    </Typography>
-  </Box>
-);
-
-const ProjectCard = ({ project }) => {
-  const { title, year, description, tech, image, links = {}, privateRepo } = project;
+const ProjectCard = ({ project, reversed = false }) => {
+  const {
+    title, year, description, tech, icon, image, illustrated,
+    links = {}, privateRepo,
+  } = project;
 
   return (
     <Box
@@ -33,17 +20,39 @@ const ProjectCard = ({ project }) => {
       }}
     >
       <Grid container spacing={{ xs: 3, md: 6 }} alignItems="start">
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={6} order={{ xs: 2, md: reversed ? 2 : 1 }}>
           <Stack
             direction="row"
-            alignItems="baseline"
+            alignItems="center"
             justifyContent="space-between"
             spacing={2}
             sx={{ mb: 1 }}
           >
-            <Typography variant="h3" component="h2">
-              {title}
-            </Typography>
+            <Stack direction="row" alignItems="center" spacing={1.75}>
+              {icon && (
+                <Box
+                  component="img"
+                  src={icon}
+                  alt=""
+                  aria-hidden="true"
+                  sx={{
+                    width: 52,
+                    height: 52,
+                    flexShrink: 0,
+                    // App icons are squircles, so they keep their corners
+                    // where the rest of the site is square. The hairline is
+                    // structural, not decoration: Fallow's icon is cream on a
+                    // cream page and would have no edge without it.
+                    borderRadius: "23%",
+                    border: 1,
+                    borderColor: "divider",
+                  }}
+                />
+              )}
+              <Typography variant="h3" component="h2">
+                {title}
+              </Typography>
+            </Stack>
             {year && (
               <Typography
                 variant="overline"
@@ -78,19 +87,17 @@ const ProjectCard = ({ project }) => {
           </Stack>
         </Grid>
 
-        <Grid item xs={12} md={5}>
-          <Card sx={{ position: "relative", width: "100%", aspectRatio: "16 / 10" }}>
-            {image ? (
-              <CardMedia
-                component="img"
-                image={image}
-                alt={`${title} screenshot`}
-                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            ) : (
-              <ImagePlaceholder title={title} />
-            )}
-          </Card>
+        <Grid item xs={12} md={6} order={{ xs: 1, md: reversed ? 1 : 2 }}>
+          {image ? (
+            <Figure
+              src={image}
+              alt={illustrated ? `${title} illustration` : `${title} screenshot`}
+              ratio="16 / 10"
+              plate={!illustrated}
+            />
+          ) : (
+            <FigurePlaceholder label={`${title} — screenshot to come`} ratio="16 / 10" />
+          )}
         </Grid>
       </Grid>
     </Box>

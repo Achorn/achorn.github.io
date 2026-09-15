@@ -1,9 +1,9 @@
-import inteletravelImg from "../assets/img/inteletravel.png";
-import williamsSonomaImg from "../assets/img/williams-sonoma.png";
-import aircoverImg from "../assets/img/aircover.png";
-import nighTechnologiesImg from "../assets/img/nigh-technologies.png";
-import myadcenterImg from "../assets/img/myadcenter.jpg";
-import cuBoulderImg from "../assets/img/cu-boulder.png";
+import inteletravelImg from "../assets/img/inteletravel.webp";
+import williamsSonomaImg from "../assets/img/williams-sonoma.webp";
+import aircoverImg from "../assets/img/aircover.webp";
+import nighTechnologiesImg from "../assets/img/nigh-technologies.webp";
+import myadcenterImg from "../assets/img/myadcenter.webp";
+import cuBoulderImg from "../assets/img/cu-boulder-logo.webp";
 
 /**
  * Professional history, most recent first. Rendered as a timeline on

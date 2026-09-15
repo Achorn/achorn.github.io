@@ -1,7 +1,8 @@
-import { Box, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import ArrowLink from "../components/ArrowLink";
+import Figure from "../components/Figure";
 import ProjectCard from "../components/cards/ProjectCard";
-import profile from "../assets/selfie.jpg";
+import profile from "../assets/selfie.webp";
 import { featuredProjects } from "../data/projects";
 import { MEASURE } from "../theme/tokens";
 import { experiencePhrase } from "../data/profile";
@@ -37,14 +38,7 @@ const Home = () => (
       </Grid>
 
       <Grid item xs={12} md={5} order={{ xs: 1, md: 2 }}>
-        <Card sx={{ width: "100%", aspectRatio: "4 / 5" }}>
-          <CardMedia
-            component="img"
-            image={profile}
-            alt="Joshua Achorn"
-            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </Card>
+        <Figure src={profile} alt="Joshua Achorn" ratio="4 / 5" priority />
       </Grid>
     </Grid>
 
@@ -66,8 +60,12 @@ const Home = () => (
         <ArrowLink to="/projects">all projects</ArrowLink>
       </Stack>
 
-      {featuredProjects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+      {featuredProjects.map((project, index) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          reversed={index % 2 === 1}
+        />
       ))}
     </Box>
   </>

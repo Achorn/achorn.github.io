@@ -1,6 +1,7 @@
-import { Box, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import PageHeader from "../components/layout/PageHeader";
-import profile from "../assets/selfie.jpg";
+import Figure from "../components/Figure";
+import profile from "../assets/selfie.webp";
 import education from "../data/education";
 import { MEASURE } from "../theme/tokens";
 import { experiencePhrase } from "../data/profile";
@@ -36,14 +37,7 @@ const About = () => (
       </Grid>
 
       <Grid item xs={12} md={5}>
-        <Card sx={{ width: "100%", aspectRatio: "4 / 5" }}>
-          <CardMedia
-            component="img"
-            image={profile}
-            alt="Joshua Achorn"
-            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </Card>
+        <Figure src={profile} alt="Joshua Achorn" ratio="4 / 5" />
       </Grid>
     </Grid>
 
@@ -58,14 +52,12 @@ const About = () => (
 
       <Grid container spacing={{ xs: 3, md: 6 }} alignItems="start">
         <Grid item xs={12} md={7}>
-          <Card sx={{ width: "100%", aspectRatio: "16 / 9" }}>
-            <CardMedia
-              component="img"
-              image={education.image}
-              alt={education.school}
-              sx={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "0 20%" }}
-            />
-          </Card>
+          <Figure
+            src={education.image}
+            alt={education.school}
+            ratio="21 / 9"
+            position="0 20%"
+          />
         </Grid>
 
         <Grid item xs={12} md={5}>

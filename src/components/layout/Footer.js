@@ -1,4 +1,4 @@
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack } from "@mui/material";
 import social from "../../data/social";
 
 const Footer = () => (
@@ -11,21 +11,9 @@ const Footer = () => (
       borderTop: 1,
       borderColor: "divider",
       display: "flex",
-      flexDirection: { xs: "column", sm: "row" },
-      alignItems: { xs: "flex-start", sm: "center" },
-      justifyContent: "space-between",
-      gap: 3,
+      justifyContent: "flex-end",
     }}
   >
-    <Box>
-      <Typography variant="overline" component="p" sx={{ color: "text.secondary" }}>
-        joshua achorn
-      </Typography>
-      <Typography variant="body2" sx={{ color: "text.secondary", mt: 0.5 }}>
-        built with react. all ten fingers.
-      </Typography>
-    </Box>
-
     <Stack direction="row" spacing={0.5}>
       {social.map(({ id, label, Icon, href }) => (
         <IconButton

@@ -23,11 +23,19 @@ const AlbumCard = ({ album }) => (
           "@media (prefers-reduced-motion: reduce)": { transition: "none" },
         }}
       >
-        <Box component="img" src={album.vinyl} alt="" aria-hidden="true" sx={{ height: "100%", float: "right" }} />
+        <Box
+          component="img"
+          src={album.vinyl}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          sx={{ height: "100%", float: "right" }}
+        />
         <Box
           component="img"
           src={album.cover}
           alt={`${album.title} album cover`}
+          loading="lazy"
           sx={{ position: "absolute", left: 0, top: 0, height: "100%" }}
         />
       </Box>

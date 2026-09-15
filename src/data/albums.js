@@ -1,8 +1,8 @@
-import redVinyl from "../assets/img/albums/redVinyl.png";
-import blackVinyl from "../assets/img/albums/vinyl.png";
-import tourGuideCover from "../assets/img/albums/tourguide.jpg";
-import wallsCover from "../assets/img/albums/top.jpeg";
-import fallingDownCover from "../assets/img/albums/fallingDown.png";
+import redVinyl from "../assets/img/albums/redVinyl.webp";
+import blackVinyl from "../assets/img/albums/vinyl.webp";
+import tourGuideCover from "../assets/img/albums/tourguide.webp";
+import wallsCover from "../assets/img/albums/top.webp";
+import fallingDownCover from "../assets/img/albums/fallingDown.webp";
 
 /** Records, newest first. Each links straight out to Spotify. */
 const albums = [

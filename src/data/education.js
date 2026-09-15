@@ -1,4 +1,4 @@
-import cuBoulderImg from "../assets/img/cu-boulder.jpg";
+import cuBoulderImg from "../assets/img/cu-boulder-campus.webp";
 
 export const education = {
   school: "University of Colorado at Boulder",

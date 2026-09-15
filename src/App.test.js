@@ -45,6 +45,12 @@ describe("content", () => {
     });
   });
 
+  it("keeps hidden projects off the page entirely", () => {
+    renderAt("/projects");
+    expect(projects.some((project) => project.hidden)).toBe(false);
+    expect(screen.queryByRole("heading", { name: /brik brek/i })).not.toBeInTheDocument();
+  });
+
   it("lists every album on /music", () => {
     renderAt("/music");
     albums.forEach((album) => {

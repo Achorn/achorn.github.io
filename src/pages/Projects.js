@@ -9,8 +9,12 @@ const Projects = () => (
       subtitle="Games, tools, and apps — most of them built to learn something specific."
     />
 
-    {projects.map((project) => (
-      <ProjectCard key={project.id} project={project} />
+    {projects.map((project, index) => (
+      <ProjectCard
+        key={project.id}
+        project={project}
+        reversed={index % 2 === 1}
+      />
     ))}
   </>
 );

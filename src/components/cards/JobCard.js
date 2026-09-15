@@ -36,6 +36,7 @@ const JobCard = ({ job }) => (
           src={job.image}
           alt=""
           aria-hidden="true"
+          loading="lazy"
           sx={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
         />
       </Box>

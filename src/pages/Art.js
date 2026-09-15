@@ -1,5 +1,6 @@
-import { Box, Card, CardMedia, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import PageHeader from "../components/layout/PageHeader";
+import Figure from "../components/Figure";
 import artwork from "../data/artwork";
 
 const EmptyState = () => (
@@ -31,14 +32,7 @@ const Art = () => (
       <Grid container spacing={{ xs: 3, md: 4 }}>
         {artwork.map((piece) => (
           <Grid item xs={12} sm={6} md={4} key={piece.id}>
-            <Card sx={{ width: "100%", aspectRatio: "4 / 5" }}>
-              <CardMedia
-                component="img"
-                image={piece.image}
-                alt={piece.title}
-                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Card>
+            <Figure src={piece.image} alt={piece.title} ratio="4 / 5" />
             <Stack
               direction="row"
               alignItems="baseline"

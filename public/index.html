@@ -4,11 +4,38 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fafaf8" />
+    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121410" media="(prefers-color-scheme: dark)" />
     <meta
       name="description"
-      content="Joshua Achorn — application developer, videogame developer, and artist."
+      content="Joshua Achorn — application developer, videogame developer, and artist. Three.js games, React apps, and the occasional drawing."
     />
+    <link rel="canonical" href="https://joshuaachorn.com/" />
+
+    <!--
+      Link previews. These are static, so every route shares one card — the
+      hash router means crawlers only ever see this file.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Joshua Achorn" />
+    <meta property="og:url" content="https://joshuaachorn.com/" />
+    <meta property="og:title" content="Joshua Achorn — developer, game developer, artist" />
+    <meta
+      property="og:description"
+      content="Three.js games, React apps, and the occasional drawing. Selected work, experience, and art."
+    />
+    <meta property="og:image" content="https://joshuaachorn.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Joshua Achorn — application developer, game developer, artist" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Joshua Achorn — developer, game developer, artist" />
+    <meta
+      name="twitter:description"
+      content="Three.js games, React apps, and the occasional drawing. Selected work, experience, and art."
+    />
+    <meta name="twitter:image" content="https://joshuaachorn.com/og-image.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
