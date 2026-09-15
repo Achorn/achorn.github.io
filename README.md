@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# joshuaachorn.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site — portfolio, music, and art. React + Material UI, deployed to
+GitHub Pages at [joshuaachorn.com](https://joshuaachorn.com).
 
-## Available Scripts
+## Running it
 
-In the project directory, you can run:
+```bash
+npm install
+npm start      # dev server on http://localhost:3000
+npm test       # watch mode; CI=true npm test to run once
+npm run build  # production bundle into build/
+npm run deploy # builds, then pushes build/ to the gh-pages branch
+```
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The site is a set of routes rather than one long scrolling page. Routing is
+`HashRouter`, because GitHub Pages has no server-side rewrite for deep links.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Route | Page | Source |
+|---|---|---|
+| `/` | Intro and featured projects | `src/pages/Home.js` |
+| `/about` | Longer bio and education | `src/pages/About.js` |
+| `/projects` | Every project | `src/pages/Projects.js` |
+| `/experience` | Work history | `src/pages/Experience.js` |
+| `/music` | Albums, linking out to Spotify — **hidden from the nav** | `src/pages/Music.js` |
+| `/art` | Gallery | `src/pages/Art.js` |
 
-### `npm test`
+`/blog` is a separate site and is linked out to from the nav.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Layout of the code
 
-### `npm run build`
+```
+src/
+  data/        content — edit these, not the pages
+  pages/       one file per route, composition only
+  components/
+    layout/    app shell: nav, footer, page header
+    cards/     the repeated pieces: project, job, album
+  theme/       MUI theme and the light/dark colour mode
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Content lives in `src/data/`.** Adding a project, a job, or an album means
+editing the relevant file there — no page or component needs to change. Each
+data file documents its own fields at the top.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- A project with `featured: true` also appears on the home page.
+- A project with no `image` renders a titled placeholder, so it can ship before
+  the screenshot exists.
+- `src/data/artwork.js` is intentionally empty; `/art` renders an empty state
+  until pieces are added to it.
+- `src/data/navigation.js` drives the nav bar in both desktop and mobile form.
+  `/music` is commented out there: the route still works, it is just not linked.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Theming
 
-### `npm run eject`
+`src/theme/createAppTheme.js` builds the theme for a given mode, and
+`ColorModeContext` holds the current one, persists it to `localStorage`, and
+falls back to the OS preference. Colours belong in the theme — pages and
+components should reference palette tokens (`text.secondary`, `background.paper`)
+so both modes stay correct.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`src/App.test.js` renders every route and exercises the nav and the colour mode
+toggle. It reads the data files directly, so a new project or album is covered
+the moment it is added.
