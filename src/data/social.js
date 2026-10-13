@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedin, FaSpotify, FaGithub } from "react-icons/fa";
+import { SiKofi } from "react-icons/si";
 
 const social = [
   {
@@ -24,6 +25,12 @@ const social = [
     label: "GitHub",
     Icon: FaGithub,
     href: "https://github.com/Achorn",
+  },
+  {
+    id: "kofi",
+    label: "Buy me a coffee on Ko-fi",
+    Icon: SiKofi,
+    href: "https://ko-fi.com/vanachorn",
   },
 ];
 
