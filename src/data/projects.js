@@ -29,6 +29,8 @@ import toadImg from "../assets/img/projectImg/toad.webp";
 const allProjects = [
   {
     id: "fallow-reader",
+    // Held back until there are real screenshots to replace the illustration.
+    hidden: true,
     title: "Fallow Reader",
     year: "2026",
     tech: ["react native", "expo", "typescript", "sqlite"],
@@ -42,6 +44,8 @@ const allProjects = [
   },
   {
     id: "fallow-watcher",
+    // Held back until there are real screenshots to replace the illustration.
+    hidden: true,
     title: "Fallow Watcher",
     year: "2026",
     tech: ["typescript", "react", "youtube iframe api"],
@@ -55,6 +59,8 @@ const allProjects = [
   },
   {
     id: "second-screen",
+    // Held back until there are real screenshots to replace the illustration.
+    hidden: true,
     title: "Second Screen",
     year: "2026",
     tech: ["swift", "videotoolbox", "webcodecs", "websockets"],
