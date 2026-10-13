@@ -21,21 +21,6 @@ import toadImg from "../assets/img/projectImg/toad.webp";
  *   tech        stack chips, lowercase, in the order they should read
  *   links       omit a link entirely rather than pointing it at null
  *   image       omit for projects with no screenshot yet
- *   type        the project's own voice: { font, weight, transform }. Taken
- *               from the thing itself where there is evidence — Fallow's
- *               reading serif, Second Screen's monospaced UI, the browser
- *               default Times the spaceship game never overrode. All system
- *               stacks, so none of it costs a download.
- *   tint        band colour for the row. For screenshots it is sampled from
- *               the image so the picture merges into it with no visible edge;
- *               for the drawn covers it sits a shade lighter than their own
- *               ground, so the blob still reads as a shape. One value, not a
- *               pair: the images do not change with the theme, so neither can
- *               the band. Text on it adapts instead — see theme/bandInk.js.
- *   bleed       blow the screenshot up and run it off the outer edge of the
- *               window and past the foot of its own band. Only for images
- *               whose edges are scenery — a UI screenshot cropped this way
- *               just looks broken.
  *   icon        the app's own icon, shown beside the title
  *   illustrated drawn artwork rather than a screenshot. It carries its own
  *               background, so it is shown without a plate behind it and does
@@ -44,8 +29,6 @@ import toadImg from "../assets/img/projectImg/toad.webp";
 const allProjects = [
   {
     id: "fallow-reader",
-    type: { font: 'Georgia, "Iowan Old Style", "Palatino Linotype", serif', weight: 400, transform: "none" },
-    tint: "#F2EDE5",
     title: "Fallow Reader",
     year: "2026",
     tech: ["react native", "expo", "typescript", "sqlite"],
@@ -59,8 +42,6 @@ const allProjects = [
   },
   {
     id: "fallow-watcher",
-    type: { font: 'Georgia, "Iowan Old Style", "Palatino Linotype", serif', weight: 400, transform: "none" },
-    tint: "#F2EDE5",
     title: "Fallow Watcher",
     year: "2026",
     tech: ["typescript", "react", "youtube iframe api"],
@@ -74,8 +55,6 @@ const allProjects = [
   },
   {
     id: "second-screen",
-    type: { font: "ui-monospace, SFMono-Regular, Menlo, monospace", weight: 500, transform: "lowercase" },
-    tint: "#F3ECF9",
     title: "Second Screen",
     year: "2026",
     tech: ["swift", "videotoolbox", "webcodecs", "websockets"],
@@ -89,8 +68,6 @@ const allProjects = [
   },
   {
     id: "ball-physics-racer",
-    type: { font: '"Helvetica Neue", Helvetica, Arial, sans-serif', weight: 700, transform: "uppercase" },
-    tint: "#C5EDF9",
     title: "Ball Physics Racer",
     year: "2025",
     featured: true,
@@ -105,9 +82,6 @@ const allProjects = [
   },
   {
     id: "my-little-spaceship",
-    type: { font: '"Times New Roman", Times, serif', weight: 400, transform: "none" },
-    bleed: true,
-    tint: "#242235",
     title: "My Little Spaceship",
     year: "2025",
     featured: true,
@@ -122,8 +96,6 @@ const allProjects = [
   },
   {
     id: "brik-brek",
-    type: { font: "ui-monospace, Menlo, monospace", weight: 500, transform: "lowercase" },
-    tint: "#A8B4D6",
     title: "Brik Brek",
     year: "2025",
     hidden: true,
@@ -138,9 +110,6 @@ const allProjects = [
   },
   {
     id: "sf-neighborhood-quiz",
-    type: { font: 'Georgia, "Times New Roman", serif', weight: 400, transform: "none" },
-    bleed: true,
-    tint: "#A2CFDB",
     title: "SF Neighborhood Quiz",
     year: "2024",
     tech: ["mongodb", "node", "express", "javascript"],
@@ -154,8 +123,6 @@ const allProjects = [
   },
   {
     id: "toad-agotchi",
-    type: { font: 'Roboto, system-ui, -apple-system, sans-serif', weight: 500, transform: "none" },
-    tint: "#D7BED9",
     title: "Toad-agotchi",
     year: "2024",
     tech: ["mongodb", "node", "express", "react", "material ui"],
