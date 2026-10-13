@@ -1,33 +1,28 @@
-import "./App.css";
-import "./pages/main/Main";
-import ScrollToTop from "./ScrollToTop";
-import { Routes, Route } from "react-router-dom";
-import Footer from "./components/display/footer/Footer";
-// import { ThemeProvider } from "./context/ThemeContext";
-import Home from "./pages/home/Home";
-import Art from "./pages/art/Art.js";
-import Music from "./pages/music/Music.js";
-import { ThemeProvider } from "@mui/material";
-import theme from "./theme";
-import Nav from "./components/Nav/Nav";
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        {/* <ScrollToTop /> */}
-        {/* <SideNav /> */}
-        <Nav>
-          <Routes>
-            {/* <Route exact path="/" element={<Main />} /> */}
-            <Route exact path="/" element={<Home />} />
-            {/* <Route path="/music" element={<Music />} /> */}
-            <Route path="/art" element={<Art />} />
-          </Routes>
-        </Nav>
-        <Footer />
-      </div>
-    </ThemeProvider>
-  );
-}
+import { Route, Routes } from "react-router-dom";
+import { ColorModeProvider } from "./theme/ColorModeContext";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Music from "./pages/Music";
+import Art from "./pages/Art";
+import NotFound from "./pages/NotFound";
+
+const App = () => (
+  <ColorModeProvider>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="experience" element={<Experience />} />
+        <Route path="music" element={<Music />} />
+        <Route path="art" element={<Art />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  </ColorModeProvider>
+);
 
 export default App;
