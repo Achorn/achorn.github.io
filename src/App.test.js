@@ -91,11 +91,14 @@ describe("navigation", () => {
     ).toBeInTheDocument();
   });
 
-  it("keeps music out of the nav while its route stays reachable", () => {
-    renderAt("/");
-    const nav = screen.getByRole("navigation", { name: "Main" });
-    expect(within(nav).queryByRole("link", { name: "music" })).not.toBeInTheDocument();
-  });
+  it.each(["music", "art"])(
+    "keeps %s out of the nav while its route stays reachable",
+    (label) => {
+      renderAt("/");
+      const nav = screen.getByRole("navigation", { name: "Main" });
+      expect(within(nav).queryByRole("link", { name: label })).not.toBeInTheDocument();
+    }
+  );
 
   it("points the blog link off-site", () => {
     renderAt("/");
