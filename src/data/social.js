@@ -1,6 +1,18 @@
 import { FaInstagram, FaLinkedin, FaSpotify, FaGithub } from "react-icons/fa";
 import { SiKofi } from "react-icons/si";
 
+/**
+ * Ko-fi is deliberately not in this list. As a fifth icon it looked like
+ * another profile to follow, and nobody would read it as a way to support the
+ * work — so the footer gives it a label and a button of its own.
+ */
+export const support = {
+  id: "kofi",
+  label: "Buy me a coffee on Ko-fi",
+  Icon: SiKofi,
+  href: "https://ko-fi.com/vanachorn",
+};
+
 const social = [
   {
     id: "instagram",
@@ -25,12 +37,6 @@ const social = [
     label: "GitHub",
     Icon: FaGithub,
     href: "https://github.com/Achorn",
-  },
-  {
-    id: "kofi",
-    label: "Buy me a coffee on Ko-fi",
-    Icon: SiKofi,
-    href: "https://ko-fi.com/vanachorn",
   },
 ];
 

@@ -1,7 +1,12 @@
-import { Box, IconButton, Stack } from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import { ReactComponent as AcornIcon } from "../../assets/acorn.svg";
-import social from "../../data/social";
+import social, { support } from "../../data/social";
 
+/**
+ * One centred column: the mark, the ask, then the socials. The coffee link
+ * gets a label and the site's own outlined button rather than a fifth icon,
+ * because an unlabelled cup reads as one more profile to follow.
+ */
 const Footer = () => (
   <Box
     component="footer"
@@ -12,31 +17,46 @@ const Footer = () => (
       borderTop: 1,
       borderColor: "divider",
       display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
+      justifyContent: "center",
     }}
   >
-    <AcornIcon
-      aria-hidden="true"
-      style={{ height: 30, width: "auto", opacity: 0.55 }}
-    />
+    <Stack alignItems="center" spacing={2.25}>
+      <AcornIcon
+        aria-hidden="true"
+        style={{ height: 34, width: "auto", opacity: 0.55 }}
+      />
 
-    <Stack direction="row" spacing={0.5}>
-      {social.map(({ id, label, Icon, href }) => (
-        <IconButton
-          key={id}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={label}
-          sx={{
-            color: "text.secondary",
-            "&:hover": { color: "primary.main", bgcolor: "transparent" },
-          }}
-        >
-          <Icon size="17px" />
-        </IconButton>
-      ))}
+      <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        enjoyed something here?
+      </Typography>
+
+      <Button
+        variant="outlined"
+        href={support.href}
+        target="_blank"
+        rel="noreferrer"
+        startIcon={<support.Icon size="17px" />}
+      >
+        buy me a coffee
+      </Button>
+
+      <Stack direction="row" spacing={0.5}>
+        {social.map(({ id, label, Icon, href }) => (
+          <IconButton
+            key={id}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={label}
+            sx={{
+              color: "text.secondary",
+              "&:hover": { color: "primary.main", bgcolor: "transparent" },
+            }}
+          >
+            <Icon size="22px" />
+          </IconButton>
+        ))}
+      </Stack>
     </Stack>
   </Box>
 );

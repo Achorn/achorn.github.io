@@ -5,6 +5,7 @@ import navigation from "./data/navigation";
 import projects from "./data/projects";
 import albums from "./data/albums";
 import jobs from "./data/experience";
+import social, { support } from "./data/social";
 import { experiencePhrase, yearsOfExperience } from "./data/profile";
 
 const renderAt = (route) =>
@@ -144,5 +145,21 @@ describe("years of experience", () => {
     expect(
       screen.getByText(new RegExp(`${phrase} of\\s+experience`, "i"))
     ).toBeInTheDocument();
+  });
+});
+
+describe("footer", () => {
+  it("gives the coffee link a label of its own, not a bare icon", () => {
+    renderAt("/");
+    const link = screen.getByRole("link", { name: /buy me a coffee/i });
+    expect(link).toHaveAttribute("href", support.href);
+  });
+
+  it("keeps the coffee link out of the social icons", () => {
+    expect(social.map((item) => item.id)).not.toContain(support.id);
+    renderAt("/");
+    social.forEach((item) => {
+      expect(screen.getByRole("link", { name: item.label })).toBeInTheDocument();
+    });
   });
 });
